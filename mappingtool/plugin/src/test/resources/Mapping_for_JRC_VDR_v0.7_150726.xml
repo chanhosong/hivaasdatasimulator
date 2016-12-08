@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><MapData>
+    <Header id="VDR_Mapping" version="0" revision="6" equipmentID="VDR">
+        <References>
+            <VDMFileVersion version="0" revision="6"/>
+            <EQDFileVersion version="0" revision="6"/>
+        </References>
+        <History>
+            <Hitem version="0" revision="6" when="2015/06/22" who="" what="" why=""/>
+            <Hitem version="0" revision="2" when="2015/02/21" who="" what="" why=""/>
+            <Hitem version="0" revision="1" when="2015/02/01" who="" what="" why=""/>
+        </History>
+    </Header>
+    <Mappings>
+        <Mapping protocol="NMEA" function="" from="GGA" param1="field:01" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Time.UTCTime.utc"/>
+        <Mapping protocol="NMEA" function="" from="GGA" param1="field:02" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Position.latitude.deg"/>
+        <Mapping protocol="NMEA" function="" from="GGA" param1="field:03" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Position.latitude.dir"/>
+        <Mapping protocol="NMEA" function="" from="GGA" param1="field:04" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Position.longitude.deg"/>
+        <Mapping protocol="NMEA" function="" from="GGA" param1="field:05" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Position.longitude.dir"/>
+        <Mapping protocol="NMEA" function="" from="GLL" param1="field:01" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Position.latitude.deg"/>
+        <Mapping protocol="NMEA" function="" from="GLL" param1="field:02" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Position.latitude.dir"/>
+        <Mapping protocol="NMEA" function="" from="GLL" param1="field:03" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Position.longitude.deg"/>
+        <Mapping protocol="NMEA" function="" from="GLL" param1="field:04" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Position.longitude.dir"/>
+        <Mapping protocol="NMEA" function="" from="GLL" param1="field:05" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Time.UTCTime.utc"/>
+        <Mapping protocol="NMEA" function="" from="ZDA" param1="field:01" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Time.UTCTime.utc"/>
+        <Mapping protocol="NMEA" function="" from="ZDA" param1="field:02" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Time.UTCTime.day"/>
+        <Mapping protocol="NMEA" function="" from="ZDA" param1="field:03" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Time.UTCTime.month"/>
+        <Mapping protocol="NMEA" function="" from="ZDA" param1="field:04" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Time.UTCTime.year"/>
+        <Mapping protocol="NMEA" function="" from="ZDA" param1="field:05" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Time.Difference.hour"/>
+        <Mapping protocol="NMEA" function="" from="ZDA" param1="field:06" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Time.Difference.minute"/>
+        <Mapping protocol="NMEA" function="" from="VTG" param1="field:01" param2="" to="VDMPath:PositioningDevice/GPSSensor1.COG.val"/>
+        <Mapping protocol="NMEA" function="" from="VTG" param1="field:05" param2="" to="VDMPath:PositioningDevice/GPSSensor1.SOG.val"/>
+        <Mapping protocol="NMEA" function="" from="DTM" param1="field:01" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Datum.localdatum"/>
+        <Mapping protocol="NMEA" function="" from="DTM" param1="field:02" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Datum.subcode"/>
+        <Mapping protocol="NMEA" function="" from="DTM" param1="field:03" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Datum.Offset.latitude.deg"/>
+        <Mapping protocol="NMEA" function="" from="DTM" param1="field:04" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Datum.Offset.latitude.dir"/>
+        <Mapping protocol="NMEA" function="" from="DTM" param1="field:05" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Datum.Offset.longitude.deg"/>
+        <Mapping protocol="NMEA" function="" from="DTM" param1="field:06" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Datum.Offset.longitude.dir"/>
+        <Mapping protocol="NMEA" function="" from="DTM" param1="field:07" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Datum.Offset.altitude"/>
+        <Mapping protocol="NMEA" function="" from="DTM" param1="field:08" param2="" to="VDMPath:PositioningDevice/GPSSensor1.Datum.refdatum"/>
+        <Mapping protocol="NMEA" function="" from="HDT" param1="field:01" param2="" to="VDMPath:HeadingDevice/GyroSensor1.Heading.val"/>
+        <Mapping protocol="NMEA" function="" from="ROT" param1="field:01" param2="" to="VDMPath:HeadingDevice/GyroSensor1.ROT.val"/>
+        <Mapping protocol="NMEA" function="" from="VBW" param1="field:01" param2="" to="VDMPath:SDMEDevice/SpeedSensor1.STW.val"/>
+        <Mapping protocol="NMEA" function="" from="DBT" param1="field:01" param2="" to="VDMPath:SDMEDevice/DepthSensor1.Depth.val"/>
+        <Mapping protocol="NMEA" function="" from="DPT" param1="field:01" param2="" to="VDMPath:SDMEDevice/DepthSensor1.Depth.val"/>
+        <Mapping protocol="NMEA" function="" from="MWD" param1="field:01" param2="" to="VDMPath:AuxiliaryDevice/WindSensor1.Direction.val"/>
+        <Mapping protocol="NMEA" function="" from="MWD" param1="field:05" param2="" to="VDMPath:AuxiliaryDevice/WindSensor1.Speed.val"/>
+        <Mapping protocol="NMEA" function="" from="MWV" param1="field:01" param2="" to="VDMPath:AuxiliaryDevice/WindSensor1.Direction.val"/>
+        <Mapping protocol="NMEA" function="" from="MWV" param1="field:03" param2="" to="VDMPath:AuxiliaryDevice/WindSensor1.Speed.val"/>
+        <Mapping protocol="NMEA" function="" from="RSA" param1="field:01" param2="" to="VDMPath:AuxiliaryDevice/RudderSensor1.Angle.val"/>
+        <Mapping protocol="NMEA" function="" from="RSA" param1="field:03" param2="" to="VDMPath:AuxiliaryDevice/RudderSensor2.Angle.val"/>
+        <Mapping protocol="NMEA" function="" from="RPM" param1="field:03" param2="" to="VDMPath:AuxiliaryDevice/RPMSensor1.RPM.val"/>
+        <Mapping protocol="NMEA" function="" from="VDM" param1="bypass" param2="" to="VDMPath:AIS/GenAIS0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="VDO" param1="bypass" param2="" to="VDMPath:AIS/GenAIS0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="ALA" param1="bypass" param2="" to="VDMPath:ALRT/GenALRT0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="ALR" param1="bypass" param2="" to="VDMPath:ALRT/GenALRT0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="XDR" param1="bypass" param2="" to="VDMPath:ALRT/GenALRT0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="DOR" param1="bypass" param2="" to="VDMPath:ALRT/GenALRT0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="EVE" param1="bypass" param2="" to="VDMPath:ALRT/GenALRT0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="TXT" param1="bypass" param2="" to="VDMPath:ALRT/GenALRT0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="TTM" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="HTD" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="HTC" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="PRC" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="JRC" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="JRCD" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="JRCL" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="ETL" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="HDM" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="RMC" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="NMEA" function="" from="GNS" param1="bypass" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="KV" function="" from="KEY1" param1="" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="KV" function="" from="KEY2" param1="" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+        <Mapping protocol="KV" function="" from="KEY3" param1="" param2="" to="VDMPath:RADR/GenRADR0.Msg.data"/>
+    </Mappings>
+</MapData>

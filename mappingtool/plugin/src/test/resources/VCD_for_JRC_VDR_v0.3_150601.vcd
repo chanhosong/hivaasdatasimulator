@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VCL>
+  <Header id="VDM_for_VDR" version="0" revision="5" toolID="HHI VDM Mapping Tool ver 1.0" >
+    <Text>Vessel Data Model for VDR ProtoType</Text>
+    <History>
+      <Hitem version="0" revision="1" when="Thursday, April 2, 2015 09:02:00 AM" who="Licenced user: Jeehoon Park" what="" why=""/>
+    </History>
+  </Header>
+
+  <Vessel imo="1111111" name="GoingMary" type="Container" vendor="HHI">
+    <EquipmentGroup name="Navigation" desc="">
+      <Equipment name="PositioningEquipment" desc="">
+        <ConnectivityNode systemName="VDR" ldInst="GPS" />
+      </Equipment>
+      <Equipment name="HeadingInfoEquipment" desc="">
+        <ConnectivityNode systemName="VDR" ldInst="GYRO" />
+      </Equipment>
+      <Equipment name="SpeedMeasuringEquipment" desc="">
+        <ConnectivityNode systemName="VDR" ldInst="SLOG" />
+      </Equipment>
+      <Equipment name="DepthMeasuringEquipment" desc="">
+        <ConnectivityNode systemName="VDR" ldInst="ESDR" />
+      </Equipment>
+      <Equipment name="AuxMeasuringEquipment" desc="">
+        <ConnectivityNode systemName="VDR" ldInst="AUX" />
+        <ConnectivityNode systemName="VDR" ldInst="ALRT" />
+      </Equipment>
+      <Equipment name="CollisionAvoidanceEquipment" desc="">
+      	<ConnectivityNode systemName="VDR" ldInst="AIS" />
+        <ConnectivityNode systemName="VDR" ldInst="RADR" />
+      </Equipment>
+      <Equipment name="AutopilotEquipment" desc="">
+      	<ConnectivityNode systemName="VDR" ldInst="AUTP" />
+        <ConnectivityNode systemName="VDR" ldInst="SPDP" />
+      </Equipment>
+      <Equipment name="ChartEquipment" desc="">
+      	<ConnectivityNode systemName="VDR" ldInst="ECDS" />
+      </Equipment>
+
+    </EquipmentGroup>
+  </Vessel>
+
+  <System name="VDR" vendor="JRC" desc="">
+    <LDevice inst="GPS" desc="Global Positioning System">
+      <LN lnType="VDR/GPS_1" lnClass="GPS" inst="1" prefix="" desc=""></LN>
+      <LN lnType="VDR/GPS_1" lnClass="GPS" inst="2" prefix="" desc=""></LN>
+    </LDevice>
+    <LDevice inst="GYRO" desc="Gyro Compass">
+      <LN lnType="VDR/GYRO_1" lnClass="GYRO" inst="1" prefix="" desc=""></LN>
+      <LN lnType="VDR/GYRO_1" lnClass="GYRO" inst="2" prefix="" desc=""></LN>
+    </LDevice>
+    <LDevice inst="SLOG" desc="Speed Log">
+      <LN lnType="VDR/SLOG_1" lnClass="SLOG" inst="1" prefix="" desc=""></LN>
+    </LDevice>
+    <LDevice inst="ESDR" desc="Echo Sounder">
+      <LN lnType="VDR/ESDR_1" lnClass="ESDR" inst="1" prefix="" desc=""></LN>
+    </LDevice>
+    <LDevice inst="AUX" desc="Auxiliary">
+      <LN lnType="VDR/WIND_1" lnClass="WIND" inst="1" prefix="" desc=""></LN>
+      <LN lnType="VDR/RPM_1" lnClass="RPM" inst="1" prefix="" desc=""></LN>
+      <LN lnType="VDR/RPM_1" lnClass="RPM" inst="2" prefix="" desc=""></LN>
+      <LN lnType="VDR/RUDD_1" lnClass="RUDD" inst="1" prefix="" desc=""></LN>
+      <LN lnType="VDR/RUDD_1" lnClass="RUDD" inst="2" prefix="" desc=""></LN>
+    </LDevice>
+    <LDevice inst="ALRT" desc="Alert Management">
+      <LN lnType="VDR/ALRT_0" lnClass="ALRT" inst="0" prefix="Gen" desc=""></LN>
+    </LDevice>
+    <LDevice inst="AIS" description="Automatic Identification System">
+      <LN lnType="VDR/AIS_0" lnClass="AIS" inst="0" prefix="Gen" desc=""></LN>
+      <LN lnType="VDR/AIS_1" lnClass="AIS" inst="1" prefix="VDM" desc=""></LN>
+      <LN lnType="VDR/AIS_1" lnClass="AIS" inst="1" prefix="VDO" desc=""></LN>
+    </LDevice>
+    <LDevice inst="RADR" description="Radar">
+      <LN lnType="VDR/RADR_0" lnClass="RADR" inst="0" prefix="Gen" desc=""></LN>
+    </LDevice>
+    <LDevice inst="AUTP" description="Autopilot">
+      <LN lnType="VDR/AUTP_0" lnClass="AUTP" inst="0" prefix="" desc=""></LN>
+      <LN lnType="VDR/SPDP_0" lnClass="SPDP" inst="0" prefix="" desc=""></LN>
+    </LDevice>
+    <LDevice inst="ECDS" description="ECDIS">
+      <LN lnType="VDR/ECDS_0" lnClass="ECDS" inst="0" prefix="Gen" desc=""></LN>
+    </LDevice>
+
+  </System>
+
+  <DataTypeTemplates>
+    <LNodeType id="VDR/GPS_1" lnClass="GPS">
+      <DO name="Pos" type="VDR/GCS_1" />
+      <DO name="Datum" type="VDR/GDT_1" />
+      <DO name="Time" type="VDR/CTM_1" />
+      <DO name="SpeedOvGroundN" type="VDR/MV_1" />
+      <DO name="SpeedOvGroundK" type="VDR/MV_1" />
+      <DO name="CourseOvGroundT" type="VDR/MV_1" />
+      <DO name="CourseOvGroundM" type="VDR/MV_1" />
+      <DO name="Quality" type="VDR/ENG_1" />
+      <DO name="Mode" type="VDR/ENG_2" />
+      <DO name="NaviStatus" type="VDR/ENG_3" />
+    </LNodeType>
+    <LNodeType id="VDR/GYRO_1" lnClass="GYRO">
+      <DO name="Heading" type="VDR/MV_1" />
+      <DO name="ROT" type="VDR/MV_1" />
+      <DO name="Mode" type="VDR/ENG_4" />
+    </LNodeType>
+    <LNodeType id="VDR/SLOG_1" lnClass="SLOG">
+      <DO name="SpeedThWaterN" type="VDR/MV_1" />
+      <DO name="SpeedThWaterK" type="VDR/MV_1" />
+    </LNodeType>
+    <LNodeType id="VDR/ESDR_1" lnClass="ESDR">
+      <DO name="DepthF" type="VDR/MV_1" />
+      <DO name="DepthM" type="VDR/MV_1" />
+      <DO name="DepthFt" type="VDR/MV_1" />
+    </LNodeType>
+    <LNodeType id="VDR/WIND_1" lnClass="WIND">
+      <DO name="Dir" type="VDR/MV_1" />
+      <DO name="DirT" type="VDR/MV_1" />
+      <DO name="DirM" type="VDR/MV_1" />
+      <DO name="Speed" type="VDR/MV_1" />
+      <DO name="SpeedN" type="VDR/MV_1" />
+      <DO name="SpeedM" type="VDR/MV_1" />
+    </LNodeType>
+    <LNodeType id="VDR/RPM_1" lnClass="RPM">
+      <DO name="Src" type="VDR/ENG_5" />
+      <DO name="Speed" type="VDR/MV_1" />
+      <DO name="Pitch" type="VDR/MV_1" />
+    </LNodeType>
+    <LNodeType id="VDR/RUDD_1" lnClass="RUDD">
+      <DO name="Angle" type="VDR/MV_1" />
+    </LNodeType>
+    <LNodeType id="VDR/ALRT_0" lnClass="ALRT">
+      <DO name="Msg" type="COM/MSG_1" />
+    </LNodeType>
+    <LNodeType id="VDR/AIS_0" lnClass="AIS">
+      <DO name="Msg" type="COM/MSG_1" />
+    </LNodeType>
+    <LNodeType id="VDR/RADR_0" lnClass="RADR">
+      <DO name="Msg" type="COM/MSG_1" />
+    </LNodeType>
+
+    <DOType id="VDR/GCS_1" cdc="GCS">
+      <DA name="latitude" bType="Struct" type="VDR/Coordinate_1" />
+      <DA name="longitude" bType="Struct" type="VDR/Coordinate_1" />
+      <DA name="altitude" bType="FLOAT32" type=""/>
+    </DOType>
+    <DOType id="VDR/GDT_1" cdc="GDT">
+      <SDO name="Offset" type="VDR/GCS_1" />
+      <DA name="localDatum" bType="VisString8" type=""/>
+      <DA name="localDatumSubCode" bType="VisString8" type=""/>
+      <DA name="refDatum" bType="VisString8" type=""/>
+    </DOType>
+    <DOType id="VDR/CTM_1" cdc="CTM">
+      <DA name="utc" bType="TimeStamp" type=""/>
+      <DA name="month" bType="INT8U" type=""/>
+      <DA name="day" bType="INT8U" type=""/>
+      <DA name="hour" bType="INT8U" type=""/>
+      <DA name="minute" bType="INT8U" type=""/>
+      <DA name="localzoneHour" bType="INT8" type=""/>
+      <DA name="localzoneMin" bType="INT8" type=""/>
+    </DOType>
+    <DOType id="VDR/MV_1" cdc="MV">
+      <DA name="val" bType="Struct" type="VDR/AnalogueValue_1" />
+      <DA name="q" bType="Enum" type="Quality" />
+      <DA name="t" bType="Timestamp" type=""/>
+      <DA name="units" bType="Struct" type="VDR/Unit_1" />
+    </DOType>
+    <DOType id="VDR/ING_1" cdc="ING">
+      <DA name="setVal" bType="INT32" type=""/>
+    </DOType>
+    <DOType id="VDR/ENG_1" cdc="ENG">
+      <DA name="setVal" bType="Enum" type="GPSQuality" />
+    </DOType>
+    <DOType id="VDR/ENG_2" cdc="ENG">
+      <DA name="setVal" bType="Enum" type="GPSMode" />
+    </DOType>
+    <DOType id="VDR/ENG_3" cdc="ENG">
+      <DA name="setVal" bType="Enum" type="NaviStatus" />
+    </DOType>
+    <DOType id="VDR/ENG_5" cdc="ENG">
+      <DA name="setVal" bType="Enum" type="RPMSource" />
+    </DOType>
+    <DOType id="COM/MSG_1" cdc="MSG">
+      <DA name="data" bType="VisString255" type=""/>
+    </DOType>
+
+    <DAType id="VDR/Coordinate_1">
+      <BDA name="deg" bType="FLOAT32" type=""/>
+      <BDA name="dir" bType="Enum" type="Direction" />
+    </DAType>
+    <DAType id="VDR/AnalogueValue_1">
+      <BDA name="f" bType="FLOAT32" type=""/>
+    </DAType>
+    <DAType id="VDR/AnalogueValue_2">
+      <BDA name="i" bType="INT32" type=""/>
+    </DAType>
+    <DAType id="VDR/Unit_1">
+      <BDA name="SIUnit" bType="Enum" type="SIUnit" />
+      <BDA name="multiplier" bType="Enum" type="multiplier" />
+    </DAType>
+
+    <EnumType id="Direction">
+      <EnumVal ord="1">North</EnumVal>
+      <EnumVal ord="2">South</EnumVal>
+      <EnumVal ord="3">East</EnumVal>
+      <EnumVal ord="4">West</EnumVal>
+    </EnumType>
+    <EnumType id="Quality">
+      <EnumVal ord="0">Good</EnumVal>
+      <EnumVal ord="1">Invalid</EnumVal>
+      <EnumVal ord="2">Questionable</EnumVal>
+    </EnumType>
+    <EnumType id="GPSQuality">
+      <EnumVal ord="0">Fix not available or invalid</EnumVal>
+      <EnumVal ord="1">GPS SPS mode</EnumVal>
+      <EnumVal ord="2">Differential GPS, SPS mode</EnumVal>
+      <EnumVal ord="3">GPS PPS mode</EnumVal>
+      <EnumVal ord="4">Real Time Kinematic</EnumVal>
+      <EnumVal ord="5">Float RTK</EnumVal>
+      <EnumVal ord="6">Estimated (dead reckoning) mode</EnumVal>
+      <EnumVal ord="7">Manual input mode</EnumVal>
+      <EnumVal ord="8">Simulator mode</EnumVal>
+    </EnumType>
+    <EnumType id="GPSMode">
+      <EnumVal ord="0">Autonomous</EnumVal>
+      <EnumVal ord="1">Differential</EnumVal>
+      <EnumVal ord="2">Estimated (dead reckoning)</EnumVal>
+      <EnumVal ord="3">Float RTK</EnumVal>
+      <EnumVal ord="4">Manual input</EnumVal>
+      <EnumVal ord="5">Data not valid</EnumVal>
+      <EnumVal ord="6">Precise</EnumVal>
+      <EnumVal ord="7">Real Time Kinematic</EnumVal>
+      <EnumVal ord="8">Simulator</EnumVal>
+    </EnumType>
+    <EnumType id="NaviStatus">
+      <EnumVal ord="0">Safe</EnumVal>
+      <EnumVal ord="1">Caution</EnumVal>
+      <EnumVal ord="2">Unsafe</EnumVal>
+      <EnumVal ord="3">Navigational status not valid</EnumVal>
+    </EnumType>
+    <EnumType id="RPMSource">
+      <EnumVal ord="0">Shaft</EnumVal>
+      <EnumVal ord="1">Engine</EnumVal>
+    </EnumType>
+    <EnumType id="SIUnit">
+      <EnumVal ord="1" />
+      <EnumVal ord="2">m</EnumVal>
+      <EnumVal ord="3">kg</EnumVal>
+      <EnumVal ord="4">s</EnumVal>
+      <EnumVal ord="5">A</EnumVal>
+      <EnumVal ord="6">K</EnumVal>
+      <EnumVal ord="7">mol</EnumVal>
+      <EnumVal ord="8">cd</EnumVal>
+      <EnumVal ord="9">deg</EnumVal>
+      <EnumVal ord="10">rad</EnumVal>
+      <EnumVal ord="11">sr</EnumVal>
+      <EnumVal ord="21">Gy</EnumVal>
+      <EnumVal ord="22">q</EnumVal>
+      <EnumVal ord="23">°C</EnumVal>
+      <EnumVal ord="24">Sv</EnumVal>
+      <EnumVal ord="25">F</EnumVal>
+      <EnumVal ord="26">C</EnumVal>
+      <EnumVal ord="27">S</EnumVal>
+      <EnumVal ord="28">H</EnumVal>
+      <EnumVal ord="29">V</EnumVal>
+      <EnumVal ord="30">ohm</EnumVal>
+      <EnumVal ord="31">J</EnumVal>
+      <EnumVal ord="32">N</EnumVal>
+      <EnumVal ord="33">Hz</EnumVal>
+      <EnumVal ord="34">lx</EnumVal>
+      <EnumVal ord="35">Lm</EnumVal>
+      <EnumVal ord="36">Wb</EnumVal>
+      <EnumVal ord="37">T</EnumVal>
+      <EnumVal ord="38">W</EnumVal>
+      <EnumVal ord="39">Pa</EnumVal>
+      <EnumVal ord="41">m²</EnumVal>
+      <EnumVal ord="42">m³</EnumVal>
+      <EnumVal ord="43">m/s</EnumVal>
+      <EnumVal ord="44">m/s²</EnumVal>
+      <EnumVal ord="45">m³/s</EnumVal>
+      <EnumVal ord="46">m/m³</EnumVal>
+      <EnumVal ord="47">M</EnumVal>
+      <EnumVal ord="48">kg/m³</EnumVal>
+      <EnumVal ord="49">m²/s</EnumVal>
+      <EnumVal ord="50">W/m K</EnumVal>
+      <EnumVal ord="51">J/K</EnumVal>
+      <EnumVal ord="52">ppm</EnumVal>
+      <EnumVal ord="53">1/s</EnumVal>
+      <EnumVal ord="54">rad/s</EnumVal>
+      <EnumVal ord="61">VA</EnumVal>
+      <EnumVal ord="62">Watts</EnumVal>
+      <EnumVal ord="63">VAr</EnumVal>
+      <EnumVal ord="64">phi</EnumVal>
+      <EnumVal ord="65">cos(phi)</EnumVal>
+      <EnumVal ord="66">Vs</EnumVal>
+      <EnumVal ord="67">V²</EnumVal>
+      <EnumVal ord="68">As</EnumVal>
+      <EnumVal ord="69">A²</EnumVal>
+      <EnumVal ord="70">A²t</EnumVal>
+      <EnumVal ord="71">VAh</EnumVal>
+      <EnumVal ord="72">Wh</EnumVal>
+      <EnumVal ord="73">VArh</EnumVal>
+      <EnumVal ord="74">V/Hz</EnumVal>
+    </EnumType>
+    <EnumType id="multiplier">
+      <EnumVal ord="-24">y</EnumVal>
+      <EnumVal ord="-21">z</EnumVal>
+      <EnumVal ord="-18">a</EnumVal>
+      <EnumVal ord="-15">f</EnumVal>
+      <EnumVal ord="-12">p</EnumVal>
+      <EnumVal ord="-9">n</EnumVal>
+      <EnumVal ord="-6">μ</EnumVal>
+      <EnumVal ord="-3">m</EnumVal>
+      <EnumVal ord="-2">c</EnumVal>
+      <EnumVal ord="-1">d</EnumVal>
+      <EnumVal ord="0" />
+      <EnumVal ord="1">da</EnumVal>
+      <EnumVal ord="2">h</EnumVal>
+      <EnumVal ord="3">k</EnumVal>
+      <EnumVal ord="6">M</EnumVal>
+      <EnumVal ord="9">G</EnumVal>
+      <EnumVal ord="12">T</EnumVal>
+      <EnumVal ord="15">P</EnumVal>
+      <EnumVal ord="18">E</EnumVal>
+      <EnumVal ord="21">Z</EnumVal>
+      <EnumVal ord="24">Y</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</VCL>

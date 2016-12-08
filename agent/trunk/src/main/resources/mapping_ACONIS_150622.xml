@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><MapData>
+    <Header id="" version="" revision="" equipmentID="ACONIS">
+        <VDMVersion/>
+        <History/>
+    </Header>
+    <Mappings  systemName="ACONIS">
+        <Mapping protocol="KV" function="" from="MC046" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.val"/>
+        <Mapping protocol="KV" function="" from="MC046.T" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.t"/>
+        <Mapping protocol="KV" function="" from="MC046.EGUL" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.rangeCfg.min"/>
+        <Mapping protocol="KV" function="" from="MC046.EGUH" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.rangeCfg.max"/>
+        <Mapping protocol="KV" function="" from="MC046@LL.LMT" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.rangeCfg.llLim"/>
+        <Mapping protocol="KV" function="" from="MC046@LO.LMT" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.rangeCfg.loLim"/>
+        <Mapping protocol="KV" function="" from="MC046@HH.LMT" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.rangeCfg.hhLim"/>
+        <Mapping protocol="KV" function="" from="MC046@LL" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.alarm.ll"/>
+        <Mapping protocol="KV" function="" from="MC046@LO" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.alarm.lo"/>
+        <Mapping protocol="KV" function="" from="MC046@HI" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.alarm.hi"/>
+        <Mapping protocol="KV" function="" from="MC046@HH" param1="" param2="" to="MainEngine/CommonSensor.RPM.Response.alarm.hh"/>
+        <Mapping protocol="KV" function="" from="MW044" param1="" param2="" to="MainEngine/JacketCFWPump1.Mode.run"/>
+        <Mapping protocol="KV" function="" from="MW045" param1="" param2="" to="MainEngine/JacketCFWPump1.Mode.abnormal"/>
+        <Mapping protocol="KV" function="" from="MW046" param1="" param2="" to="MainEngine/JacketCFWPump2.Mode.run"/>
+        <Mapping protocol="KV" function="" from="MW047" param1="" param2="" to="MainEngine/JacketCFWPump2.Mode.abnormal"/>
+        <Mapping protocol="KV" function="" from="MW038" param1="" param2="" to="MainEngine/CentralCFWPump1.Mode.run"/>
+        <Mapping protocol="KV" function="" from="MW039" param1="" param2="" to="MainEngine/CentralCFWPump1.Mode.abnormal"/>
+        <Mapping protocol="KV" function="" from="MW040" param1="" param2="" to="MainEngine/CentralCFWPump2.Mode.run"/>
+        <Mapping protocol="KV" function="" from="MW041" param1="" param2="" to="MainEngine/CentralCFWPump2.Mode.abnormal"/>
+        <Mapping protocol="KV" function="" from="MW042" param1="" param2="" to="MainEngine/CentralCFWPump3.Mode.run"/>
+        <Mapping protocol="KV" function="" from="MW043" param1="" param2="" to="MainEngine/CentralCFWPump3.Mode.abnormal"/>
+        <Mapping protocol="KV" function="" from="MW032" param1="" param2="" to="MainEngine/CSWPump1.Mode.run"/>
+        <Mapping protocol="KV" function="" from="MW033" param1="" param2="" to="MainEngine/CSWPump1.Mode.abnormal"/>
+        <Mapping protocol="KV" function="" from="MW034" param1="" param2="" to="MainEngine/CSWPump2.Mode.run"/>
+        <Mapping protocol="KV" function="" from="MW035" param1="" param2="" to="MainEngine/CSWPump2.Mode.abnormal"/>
+        <Mapping protocol="KV" function="" from="MW036" param1="" param2="" to="MainEngine/CSWPump3.Mode.run"/>
+        <Mapping protocol="KV" function="" from="MW037" param1="" param2="" to="MainEngine/CSWPump3.Mode.abnormal"/>
+        <Mapping protocol="KV" function="" from="MW013" param1="" param2="" to="MainEngine/AirCooler1.Outlet.Temperature.val"/>
+        <Mapping protocol="KV" function="" from="MW013.T" param1="" param2="" to="MainEngine/AirCooler1.Outlet.Temperature.t"/>
+        <Mapping protocol="KV" function="" from="MW013.EGUL" param1="" param2="" to="MainEngine/AirCooler1.Outlet.Temperature.rangeCfg.min"/>
+        <Mapping protocol="KV" function="" from="MW013.EGUH" param1="" param2="" to="MainEngine/AirCooler1.Outlet.Temperature.rangeCfg.max"/>
+        <Mapping protocol="KV" function="" from="MW013@LL.LMT" param1="" param2="" to="MainEngine/AirCooler1.Outlet.Temperature.rangeCfg.llLim"/>
+        <Mapping protocol="KV" function="" from="MW013@HI.LMT" param1="" param2="" to="MainEngine/AirCooler1.Outlet.Temperature.rangeCfg.hiLim"/>
+        <Mapping protocol="KV" function="" from="MW013@LO.LMT" param1="" param2="" to="MainEngine/AirCooler1.Outlet.Temperature.rangeCfg.loLim"/>
+        <Mapping protocol="KV" function="" from="MW013@HH.LMT" param1="" param2="" to="MainEngine/AirCooler1.Outlet.Temperature.rangeCfg.hhLim"/>
+        <Mapping protocol="KV" function="" from="MW015" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Temperature.val"/>
+        <Mapping protocol="KV" function="" from="MW015.T" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Temperature.t"/>
+        <Mapping protocol="KV" function="" from="MW015.EGUL" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Temperature.rangeCfg.min"/>
+        <Mapping protocol="KV" function="" from="MW015.EGUH" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Temperature.rangeCfg.max"/>
+        <Mapping protocol="KV" function="" from="MW015@LL.LMT" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Temperature.rangeCfg.llLim"/>
+        <Mapping protocol="KV" function="" from="MW015@LO.LMT" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Temperature.rangeCfg.loLim"/>
+        <Mapping protocol="KV" function="" from="MW015@HI.LMT" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Temperature.rangeCfg.hiLim"/>
+        <Mapping protocol="KV" function="" from="MW015@HH.LMT" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Temperature.rangeCfg.hhLim"/>
+        <Mapping protocol="KV" function="" from="MW016" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Pressure.val"/>
+        <Mapping protocol="KV" function="" from="MW016.T" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Pressure.t"/>
+        <Mapping protocol="KV" function="" from="MW016.EGUL" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Pressure.rangeCfg.min"/>
+        <Mapping protocol="KV" function="" from="MW016.EGUH" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Pressure.rangeCfg.max"/>
+        <Mapping protocol="KV" function="" from="MW016@LL.LMT" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Pressure.rangeCfg.llLim"/>
+        <Mapping protocol="KV" function="" from="MW016@LO.LMT" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Pressure.rangeCfg.loLim"/>
+        <Mapping protocol="KV" function="" from="MW016@HI.LMT" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Pressure.rangeCfg.hiLim"/>
+        <Mapping protocol="KV" function="" from="MW016@HH.LMT" param1="" param2="" to="MainEngine/AirCooler1.Inlet.Pressure.rangeCfg.hhLim"/>
+    </Mappings>
+</MapData>

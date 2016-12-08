@@ -1,0 +1,7 @@
+instructions.configure=\
+  addRepository(type:0,location:file${#58}/d:/export6/repository/);\
+  addRepository(type:1,location:file${#58}/d:/export6/repository/);
+
+instructions.configure=\
+  addRepository(type:0,location:http${#58}//localhost:1234/repository/);\
+  addRepository(type:1,location:http${#58}//localhost:1234/repository/);

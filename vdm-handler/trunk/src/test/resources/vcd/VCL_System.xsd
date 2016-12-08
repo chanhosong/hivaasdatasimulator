@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vcl="http://www.hhi.co.kr/VCL" 
+           targetNamespace="http://www.hhi.co.kr/VCL"
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified"
+           version="0.3">
+           
+	<xs:annotation>
+		<xs:documentation xml:lang="en">VCL schema. Version 0.3</xs:documentation>
+	</xs:annotation>
+	
+	<xs:include schemaLocation="VCL_BaseTypes.xsd"/>	
+	
+	<xs:complexType name="tSystem">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>					
+					<xs:element name="LDevice" type="vcl:tLDevice" maxOccurs="unbounded">
+						<xs:unique name="uniqueLNInLDevice">
+							<xs:selector xpath="./vcl:LN"/>
+							<xs:field xpath="@inst"/>
+							<xs:field xpath="@lnClass"/>
+							<xs:field xpath="@prefix"/>
+						</xs:unique>						
+					</xs:element>					
+				</xs:sequence>				
+				<xs:attribute name="name" type="vcl:tSYSTEMName" use="required"/>
+				<xs:attribute name="type" type="xs:normalizedString" use="optional"/>
+				<xs:attribute name="vendor" type="xs:normalizedString" use="optional"/>
+				<xs:attribute name="version" type="xs:normalizedString" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tLDevice">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>					
+					<xs:element ref="vcl:LN" minOccurs="0" maxOccurs="unbounded"/>					
+				</xs:sequence>
+				<xs:attribute name="inst" type="vcl:tLDInst" use="required"/>				
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="LN" type="vcl:tLN">		
+		<xs:unique name="uniqueDOIinLN">
+			<xs:selector xpath="./vcl:DOI"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>		
+	</xs:element>
+	<xs:complexType name="tAnyLN" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>					
+					<xs:element name="DOI" type="vcl:tDOI" minOccurs="0" maxOccurs="unbounded">
+						<xs:unique name="uniqueSDI_DAIinDOI">
+							<xs:selector xpath="./*"/>
+							<xs:field xpath="@name"/>
+						</xs:unique>
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="lnType" type="vcl:tName" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tLN">
+		<xs:complexContent>
+			<xs:extension base="vcl:tAnyLN">
+				<xs:attribute name="prefix" type="vcl:tPrefix" use="optional" default=""/>
+				<xs:attribute name="lnClass" type="vcl:tLNClassEnum" use="required"/>
+				<xs:attribute name="inst" type="vcl:tLNInst" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tDOI">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="SDI" type="vcl:tSDI">
+						<xs:unique name="uniqueSDI_DAIinSDI">
+							<xs:selector xpath="./*"/>
+							<xs:field xpath="@name"/>
+						</xs:unique>
+					</xs:element>
+					<xs:element name="DAI" type="vcl:tDAI"/>
+				</xs:choice>
+				<xs:attribute name="name" type="vcl:tDataName" use="required"/>
+				<xs:attribute name="ix" type="xs:unsignedInt" use="optional"/>				
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tSDI">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="SDI" type="vcl:tSDI"/>
+					<xs:element name="DAI" type="vcl:tDAI"/>
+				</xs:choice>
+				<xs:attribute name="name" type="vcl:tAttributeNameEnum" use="required"/>
+				<xs:attribute name="ix" type="xs:unsignedInt" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tDAI">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>
+					<xs:element name="Val" type="vcl:tVal" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="name" type="vcl:tAttributeNameEnum" use="required"/>
+				<xs:attribute name="ix" type="xs:unsignedInt" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>	
+	<xs:element name="System" type="vcl:tSystem">
+		<xs:key name="LDeviceInIEDKey">
+			<xs:selector xpath="./vcl:LDevice"/>
+			<xs:field xpath="@inst"/>
+		</xs:key>
+	</xs:element>
+</xs:schema>

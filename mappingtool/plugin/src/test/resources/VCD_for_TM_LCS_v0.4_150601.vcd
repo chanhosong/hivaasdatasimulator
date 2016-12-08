@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VCL>
+  <Header id="VDM_for_LoadingComputer" version="0" revision="5" toolID="HHI VDM Mapping Tool ver 1.0" >
+    <Text>Vessel Data Model for VDR ProtoType</Text>
+    <History>
+      <Hitem version="0" revision="1" when="Thursday, April 16, 2015 09:02:00 AM" who="Licenced user: Jeehoon Park" what="" why=""/>
+    </History>
+  </Header>
+
+  <Vessel imo="1111111" name="GoingMary" type="Container" vendor="HHI">
+    <EquipmentGroup name="Cargo" desc="">
+      <Equipment name="CargoManagement" desc="">
+        <ConnectivityNode systemName="LoadingComputer" ldInst="LDCOM" />
+      </Equipment>     
+    </EquipmentGroup>
+  </Vessel>
+
+  <System name="LoadingComputer" vendor="TechMarine" desc="">
+    <LDevice inst="LDCOM" desc="Loading Computer">
+    	<LN lnType="LDCOM/LPHD_1" lnClass="LPHD" inst="1" prefix="" desc=""></LN>
+    	
+    	<LN lnType="LDCOM/STBL_1" lnClass="STBL" inst="1" prefix="Vessel" desc="stability information of vessel"></LN>
+    	
+    	<LN lnType="LDCOM/WGHT_1" lnClass="WGHT" inst="1" prefix="Vessel" desc="weight of vessel"></LN>
+    	
+    	<LN lnType="LDCOM/SCON_1" lnClass="SCON" inst="1" prefix="" desc="condition of vessel"></LN>
+    	
+    	<LN lnType="LDCOM/SALM_1" lnClass="SALM" inst="1" prefix="Alarm" desc="stability alarm information"></LN>
+    	
+    	<LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="1" prefix="CargoCompartTank" desc=""></LN>
+    	<LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="2" prefix="CargoCompartTank" desc=""></LN>
+    	<LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="3" prefix="CargoCompartTank" desc=""></LN>
+    	
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="1" prefix="WaterBallastTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="2" prefix="WaterBallastTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="3" prefix="WaterBallastTank" desc=""></LN>
+      
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="1" prefix="FuelOilTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="2" prefix="FuelOilTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="3" prefix="FuelOilTank" desc=""></LN>
+      
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="1" prefix="DieselOilTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="2" prefix="DieselOilTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="3" prefix="DieselOilTank" desc=""></LN>
+      
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="1" prefix="GasOilTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="2" prefix="GasOilTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="3" prefix="GasOilTank" desc=""></LN>
+      
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="1" prefix="LubOilTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="2" prefix="LubOilTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="3" prefix="LubOilTank" desc=""></LN>
+      
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="1" prefix="FreshWaterTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="2" prefix="FreshWaterTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="3" prefix="FreshWaterTank" desc=""></LN>
+      
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="1" prefix="MiscTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="2" prefix="MiscTank" desc=""></LN>
+      <LN lnType="LDCOM/STBL_2" lnClass="STBL" inst="3" prefix="MiscTank" desc=""></LN>     
+      
+    </LDevice>    
+  </System>
+
+  <DataTypeTemplates>
+       
+    <LNodeType id="LDCOM/SALM_1" lnClass="SALM">
+    	<DO name="IntactStability" type="LDCOM/ENS_1" />
+    	<DO name="LongitudinalStrength" type="LDCOM/ENS_1" />
+    	<DO name="HoldingFloodingStrength" type="LDCOM/ENS_1" />
+    	<DO name="DamageStability" type="LDCOM/ENS_1" />
+    	<DO name="WeatherStability" type="LDCOM/ENS_1" />
+    	<DO name="MinimumGoM" type="LDCOM/ENS_1" />
+    	<DO name="CargoMass" type="LDCOM/ENS_1" />
+    	<DO name="GrainStability" type="LDCOM/ENS_1" />
+    	<DO name="TorsionalMoment" type="LDCOM/ENS_1" />
+    	<DO name="PropellerImmersion" type="LDCOM/ENS_1" />
+    	<DO name="Visibility" type="LDCOM/ENS_1" />
+    	<DO name="MaximumDraft" type="LDCOM/ENS_1" />
+    	<DO name="MinimumForwardDraft" type="LDCOM/ENS_1" />    	
+    </LNodeType>	
+    <LNodeType id="LDCOM/LPHD_1" lnClass="LPHD">
+    	<DO name="NamePlate" type="LDCOM/LPL_1" />
+    	<DO name="Online" type="LDCOM/SPS_1" />    	
+    </LNodeType>  
+    <LNodeType id="LDCOM/WGHT_1" lnClass="WGHT" >
+    	<DO name="Displacement" type="LDCOM/MV_1" />
+    	<DO name="Deadweight" type="LDCOM/MV_1" />
+    	<DO name="CargoCompartment" type="LDCOM/MV_1" />
+    	<DO name="WaterBallastTank" type="LDCOM/MV_1" />
+    	<DO name="FuelOilTank" type="LDCOM/MV_1" />
+    	<DO name="DieselOilTank" type="LDCOM/MV_1" />
+    	<DO name="GasOilTank" type="LDCOM/MV_1" />
+    	<DO name="LubricatingOilTank" type="LDCOM/MV_1" />
+    	<DO name="FreshWaterTank" type="LDCOM/MV_1" />
+    	<DO name="MiscellaneousTank" type="LDCOM/MV_1" />
+    	<DO name="DeadweightConstant" type="LDCOM/MV_1" />
+    </LNodeType>
+    <LNodeType id="LDCOM/STBL_1" lnClass="STBL" >
+    	<DO name="LongitudinalCOG" type="LDCOM/MV_1" />
+    	<DO name="VerticalCOG" type="LDCOM/MV_1" />
+    	<DO name="TransverseCOG" type="LDCOM/MV_1" />
+    	<DO name="KMt" type="LDCOM/MV_1" />
+    	<DO name="GM" type="LDCOM/MV_1" />
+    	<DO name="GGo" type="LDCOM/MV_1" />
+    	<DO name="GoM" type="LDCOM/MV_1" />
+    	<DO name="GoZat01" type="LDCOM/MV_1" />
+    	<DO name="GoZat5" type="LDCOM/MV_1" />
+    	<DO name="GoZat10" type="LDCOM/MV_1" />
+    	<DO name="GoZat20" type="LDCOM/MV_1" />
+    	<DO name="GoZat30" type="LDCOM/MV_1" />
+    	<DO name="GoZat40" type="LDCOM/MV_1" />
+    	<DO name="GoZat50" type="LDCOM/MV_1" />
+    	<DO name="GoZat60" type="LDCOM/MV_1" />
+    	<DO name="MaxShearForce" type="LDCOM/MV_1" />
+    	<DO name="MaxBendingMoment" type="LDCOM/MV_1" />
+    </LNodeType>
+    <LNodeType id="LDCOM/STBL_2" lnClass="STBL">
+      <DO name="Weight" type="LDCOM/MV_1" />
+      <DO name="LongitudinalCOG" type="LDCOM/MV_1" />
+      <DO name="VerticalCOG" type="LDCOM/MV_1" />
+      <DO name="TransverseCOG" type="LDCOM/MV_1" />      
+    </LNodeType> 
+    <LNodeType id="LDCOM/SCON_1" lnClass="SCON" >
+    	<DO name="DraftatLCF" type="LDCOM/MV_1" />
+    	<DO name="DraftatFP" type="LDCOM/MV_1" />
+    	<DO name="Draftatmidship" type="LDCOM/MV_1" />
+    	<DO name="DraftatAP" type="LDCOM/MV_1" />
+    	<DO name="Trim" type="LDCOM/MV_1" />
+    	<DO name="HeelAngle" type="LDCOM/MV_1" />
+    	<DO name="PropImmersion" type="LDCOM/MV_1" />
+    </LNodeType>
+       
+    
+    <DOType id="LDCOM/LPL_1" cdc="LPL">
+			<DA name="SystemDate" bType="VisString255" />
+			<DA name="SystemTime" bType="VisString255" />
+			<DA name="IMONumber" bType="VisString255"/>
+    </DOType>
+    <DOType id="LDCOM/MV_1" cdc="MV">
+      <DA name="val" bType="Struct" type="LDCOM/AnalogueValue_1" />
+      <DA name="q" bType="Enum" type="Quality" />
+      <DA name="t" bType="Timestamp" />
+      <DA name="units" bType="Struct" type="LDCOM/Unit_1" />
+    </DOType>
+    <DOType id="LDCOM/SPS_1" cdc="SPS">
+			<DA name="stVal" 	bType="BOOLEAN" />
+			<DA name="q" 		bType="Quality" />
+			<DA name="t" 		bType="Timestamp"/>
+    </DOType>
+    <DOType id="LDCOM/ENS_1" cdc="ENS">
+			<DA name="stVal" 	bType="Enum" type="Alarm"/>
+			<DA name="q" 		bType="Quality" />
+			<DA name="t" 		bType="Timestamp"/>
+    </DOType>
+
+    <DAType id="LDCOM/AnalogueValue_1">
+      <BDA name="f" bType="FLOAT32" />
+    </DAType>
+    <DAType id="LDCOM/Unit_1">
+      <BDA name="SIUnit" bType="Enum" type="SIUnit" />
+      <BDA name="multiplier" bType="Enum" type="multiplier" />
+    </DAType>
+
+   
+    <EnumType id="Quality">
+      <EnumVal ord="0">Good</EnumVal>
+      <EnumVal ord="1">Invalid</EnumVal>
+      <EnumVal ord="2">Questionable</EnumVal>
+    </EnumType>    
+    <EnumType id="Alarm">
+      <EnumVal ord="0">Stable</EnumVal>
+      <EnumVal ord="1">Unstable</EnumVal>
+      <EnumVal ord="2">Not Applicable</EnumVal>
+    </EnumType>    
+    <EnumType id="SIUnit">
+      <EnumVal ord="1" />
+      <EnumVal ord="2">m</EnumVal>
+      <EnumVal ord="3">kg</EnumVal>
+      <EnumVal ord="4">s</EnumVal>
+      <EnumVal ord="5">A</EnumVal>
+      <EnumVal ord="6">K</EnumVal>
+      <EnumVal ord="7">mol</EnumVal>
+      <EnumVal ord="8">cd</EnumVal>
+      <EnumVal ord="9">deg</EnumVal>
+      <EnumVal ord="10">rad</EnumVal>
+      <EnumVal ord="11">sr</EnumVal>
+      <EnumVal ord="21">Gy</EnumVal>
+      <EnumVal ord="22">q</EnumVal>
+      <EnumVal ord="23">°C</EnumVal>
+      <EnumVal ord="24">Sv</EnumVal>
+      <EnumVal ord="25">F</EnumVal>
+      <EnumVal ord="26">C</EnumVal>
+      <EnumVal ord="27">S</EnumVal>
+      <EnumVal ord="28">H</EnumVal>
+      <EnumVal ord="29">V</EnumVal>
+      <EnumVal ord="30">ohm</EnumVal>
+      <EnumVal ord="31">J</EnumVal>
+      <EnumVal ord="32">N</EnumVal>
+      <EnumVal ord="33">Hz</EnumVal>
+      <EnumVal ord="34">lx</EnumVal>
+      <EnumVal ord="35">Lm</EnumVal>
+      <EnumVal ord="36">Wb</EnumVal>
+      <EnumVal ord="37">T</EnumVal>
+      <EnumVal ord="38">W</EnumVal>
+      <EnumVal ord="39">Pa</EnumVal>
+      <EnumVal ord="41">m²</EnumVal>
+      <EnumVal ord="42">m³</EnumVal>
+      <EnumVal ord="43">m/s</EnumVal>
+      <EnumVal ord="44">m/s²</EnumVal>
+      <EnumVal ord="45">m³/s</EnumVal>
+      <EnumVal ord="46">m/m³</EnumVal>
+      <EnumVal ord="47">M</EnumVal>
+      <EnumVal ord="48">kg/m³</EnumVal>
+      <EnumVal ord="49">m²/s</EnumVal>
+      <EnumVal ord="50">W/m K</EnumVal>
+      <EnumVal ord="51">J/K</EnumVal>
+      <EnumVal ord="52">ppm</EnumVal>
+      <EnumVal ord="53">1/s</EnumVal>
+      <EnumVal ord="54">rad/s</EnumVal>
+      <EnumVal ord="61">VA</EnumVal>
+      <EnumVal ord="62">Watts</EnumVal>
+      <EnumVal ord="63">VAr</EnumVal>
+      <EnumVal ord="64">phi</EnumVal>
+      <EnumVal ord="65">cos(phi)</EnumVal>
+      <EnumVal ord="66">Vs</EnumVal>
+      <EnumVal ord="67">V²</EnumVal>
+      <EnumVal ord="68">As</EnumVal>
+      <EnumVal ord="69">A²</EnumVal>
+      <EnumVal ord="70">A²t</EnumVal>
+      <EnumVal ord="71">VAh</EnumVal>
+      <EnumVal ord="72">Wh</EnumVal>
+      <EnumVal ord="73">VArh</EnumVal>
+      <EnumVal ord="74">V/Hz</EnumVal>
+    </EnumType>
+    <EnumType id="multiplier">
+      <EnumVal ord="-24">y</EnumVal>
+      <EnumVal ord="-21">z</EnumVal>
+      <EnumVal ord="-18">a</EnumVal>
+      <EnumVal ord="-15">f</EnumVal>
+      <EnumVal ord="-12">p</EnumVal>
+      <EnumVal ord="-9">n</EnumVal>
+      <EnumVal ord="-6">μ</EnumVal>
+      <EnumVal ord="-3">m</EnumVal>
+      <EnumVal ord="-2">c</EnumVal>
+      <EnumVal ord="-1">d</EnumVal>
+      <EnumVal ord="0" />
+      <EnumVal ord="1">da</EnumVal>
+      <EnumVal ord="2">h</EnumVal>
+      <EnumVal ord="3">k</EnumVal>
+      <EnumVal ord="6">M</EnumVal>
+      <EnumVal ord="9">G</EnumVal>
+      <EnumVal ord="12">T</EnumVal>
+      <EnumVal ord="15">P</EnumVal>
+      <EnumVal ord="18">E</EnumVal>
+      <EnumVal ord="21">Z</EnumVal>
+      <EnumVal ord="24">Y</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</VCL>

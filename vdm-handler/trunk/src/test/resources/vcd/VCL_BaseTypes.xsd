@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vcl="http://www.hhi.co.kr/VCL" 
+           targetNamespace="http://www.hhi.co.kr/VCL"
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified"
+           version="0.3">
+           
+	<xs:annotation>
+		<xs:documentation xml:lang="en">VCL schema. Version 0.3</xs:documentation>
+	</xs:annotation>
+	
+	<xs:include schemaLocation="VCL_Enums.xsd"/>
+	
+	<xs:attributeGroup name="agDesc">
+		<xs:attribute name="desc" type="xs:normalizedString" use="optional" default=""/>
+	</xs:attributeGroup>
+	<xs:complexType name="tBaseElement" abstract="true">
+		<xs:sequence>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Text" type="vcl:tText" minOccurs="0"/>
+			<xs:element name="Private" type="vcl:tPrivate" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##other" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="tUnNaming" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="vcl:tBaseElement">
+				<xs:attributeGroup ref="vcl:agDesc"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tNaming" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="vcl:tBaseElement">
+				<xs:attribute name="name" type="vcl:tName" use="required"/>
+				<xs:attributeGroup ref="vcl:agDesc"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tIDNaming" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="vcl:tBaseElement">
+				<xs:attribute name="id" type="vcl:tName" use="required"/>
+				<xs:attributeGroup ref="vcl:agDesc"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tAnyContentFromOtherNamespace" abstract="true" mixed="true">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:any namespace="##other" processContents="lax"/>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##other" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="tText" mixed="true">
+		<xs:complexContent mixed="true">
+			<xs:extension base="vcl:tAnyContentFromOtherNamespace">
+				<xs:attribute name="source" type="xs:anyURI" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tPrivate" mixed="true">
+		<xs:complexContent mixed="true">
+			<xs:extension base="vcl:tAnyContentFromOtherNamespace">
+				<xs:attribute name="type" type="xs:normalizedString" use="required"/>
+				<xs:attribute name="source" type="xs:anyURI" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tHeader">
+		<xs:sequence>
+			<xs:element name="Text" type="vcl:tText" minOccurs="0"/>
+			<xs:element name="History" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Hitem" type="vcl:tHitem" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:normalizedString" use="required"/>
+		<xs:attribute name="version" type="xs:normalizedString"/>
+		<xs:attribute name="revision" type="xs:normalizedString" default=""/>
+		<xs:attribute name="toolID" type="xs:normalizedString"/>
+		<xs:attribute name="nameStructure" use="optional" default="IEDName">
+			<xs:simpleType>
+				<xs:restriction base="xs:Name">
+					<xs:enumeration value="IEDName"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="tHitem" mixed="true">
+		<xs:complexContent mixed="true">
+			<xs:extension base="vcl:tAnyContentFromOtherNamespace">
+				<xs:attribute name="version" type="xs:normalizedString" use="required"/>
+				<xs:attribute name="revision" type="xs:normalizedString" use="required"/>
+				<xs:attribute name="when" type="xs:normalizedString" use="required"/>
+				<xs:attribute name="who" type="xs:normalizedString"/>
+				<xs:attribute name="what" type="xs:normalizedString"/>
+				<xs:attribute name="why" type="xs:normalizedString"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tVal">
+		<xs:simpleContent>
+			<xs:extension base="xs:normalizedString">				
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>	

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vcl="http://www.hhi.co.kr/VCL" 
+           targetNamespace="http://www.hhi.co.kr/VCL"
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified"
+           version="0.3">
+           
+	<xs:annotation>
+		<xs:documentation xml:lang="en">VCL schema. Version 0.3</xs:documentation>
+	</xs:annotation>
+	
+	<xs:include schemaLocation="VCL_BaseTypes.xsd"/>
+	
+	<xs:complexType name="tVessel">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>
+					<xs:element name="EquipmentGroup" type="vcl:tEquipmentGroup" maxOccurs="unbounded">						
+					</xs:element>
+				</xs:sequence>
+				<xs:attribute name="imo" type="xs:normalizedString" use="required"/>
+        			<xs:attribute name="name" type="xs:normalizedString" use="optional"/>
+      				<xs:attribute name="type" type="xs:normalizedString" use="optional"/>
+        			<xs:attribute name="manufacturer" type="xs:normalizedString" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tEquipmentGroup">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>
+					<xs:element name="Equipment" type="vcl:tEquipment" minOccurs="0" maxOccurs="unbounded">						
+					</xs:element>
+					<xs:element name="ConnectivityNode" type="vcl:tConnectivityNode" minOccurs="0" maxOccurs="unbounded">
+		          			<xs:unique name="uniqueLNodeInConnectivityNode">
+		       	     				<xs:selector xpath="./vcl:System"/>
+		       	     				<xs:field xpath="@System"/>
+		       	     				<xs:field xpath="@ldInst"/>
+		          			</xs:unique>
+					 </xs:element>
+				</xs:sequence>
+				<xs:attribute name="name" type="vcl:tEquipmentGroupEnum" use="required"/>        
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tEquipment">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>
+					<xs:element name="Component" type="vcl:tComponent" minOccurs="0" maxOccurs="unbounded">						
+					</xs:element>
+					<xs:element name="ConnectivityNode" type="vcl:tConnectivityNode" minOccurs="0" maxOccurs="unbounded">
+		          			<xs:unique name="uniqueLNodeInConnectivityNode1">
+		       	     				<xs:selector xpath="./vcl:System"/>
+		       	     				<xs:field xpath="@System"/>
+		       	     				<xs:field xpath="@ldInst"/>
+		          			</xs:unique>
+					 </xs:element>
+				</xs:sequence>
+				<xs:attribute name="name" type="vcl:tEquipmentEnum" use="required"/>        
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tComponent">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>
+				 	<xs:element name="ConnectivityNode" type="vcl:tConnectivityNode" minOccurs="0" maxOccurs="unbounded">
+		          			<xs:unique name="uniqueLNodeInConnectivityNode2">
+		       	     				<xs:selector xpath="./vcl:System"/>
+		       	     				<xs:field xpath="@System"/>
+		       	     				<xs:field xpath="@ldInst"/>
+		          			</xs:unique>
+					 </xs:element>
+				</xs:sequence>	 
+				<xs:attribute name="name" type="vcl:tComponentEnum" use="required"/>        
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tConnectivityNode">
+		<xs:complexContent>
+			<xs:extension base="vcl:tLNodeContainer">
+				<xs:attribute name="systemName" type="vcl:tSYSTEMName" use="required"/>
+				<xs:attribute name="ldInst" type="vcl:tLDInst" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tLNodeContainer">
+	</xs:complexType>
+	
+	<xs:element name="Vessel" type="vcl:tVessel">		
+		<xs:unique name="uniqueEquipmentGroup">
+			<xs:selector xpath="./vcl:Vessel"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>		
+		<xs:key name="ConnectivityNodeKey">
+			<xs:selector xpath="./vcl:ConnectivityNode"/>
+			<xs:field xpath="@pathName"/>
+		</xs:key>		
+	</xs:element>
+	
+</xs:schema>

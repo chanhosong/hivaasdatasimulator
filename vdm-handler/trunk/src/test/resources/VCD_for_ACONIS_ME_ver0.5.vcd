@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VCL>
+  <Header id="VDM_for_ACONIS" version="0" revision="5" toolID="HHI VDM Mapping Tool ver 1.0" >
+    <Text>Vessel Data Model for ACONIS ProtoType</Text>
+    <History>
+      <Hitem version="0" revision="5" when="Thursday, April 16, 2015 09:02:00 AM" who="Licenced user: Jeehoon Park" what="" why=""/>
+    </History>
+  </Header>
+
+  <Vessel imo="1111111" name="GoingMary" type="Container" vendor="HHI">
+    <EquipmentGroup name="Electrical" desc="">
+      <Equipment name="RotatingMachine" desc="">
+      	<Component name="Generator" desc="">
+      		<ConnectivityNode systemName="ACONIS" ldInst="DieselEngine1" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="DieselEngine2" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="DieselEngine3" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="DieselEngine4" />
+      	</Component>
+      </Equipment>
+    </EquipmentGroup>
+    <EquipmentGroup name="Mechanical" desc="">
+      <Equipment name="Machinery" desc="">
+      	<Component name="MainEngine" desc="">
+      		<ConnectivityNode systemName="ACONIS" ldInst="Cylinders" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="TurboChargers" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="ScavExhaust" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="CoolingFreshWater" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="LubOil" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="FuelOil" />
+      	</Component>
+      </Equipment>     
+    </EquipmentGroup>
+  </Vessel>
+
+  <System name="ACONIS" vendor="Hyundai Heavy Industries" desc="">
+		<LDevice inst="DieselEngine1" desc="">
+		</LDevice>
+		<LDevice inst="DieselEngine2" desc="">
+		</LDevice>
+		<LDevice inst="DieselEngine3" desc="">
+		</LDevice>
+		<LDevice inst="DieselEngine4" desc="">
+		</LDevice>
+    <LDevice inst="Cylinders" desc="">
+    	<LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="1" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="2" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="3" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="4" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="5" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="6" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="7" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="8" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="9" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="10" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/CYLINDER_1" lnClass="Cylinder" inst="11" prefix="" desc="">
+      </LN>
+    </LDevice>
+    <LDevice inst="TurboChargers" desc="">
+    	<LN lnType="ACONIS/TURBOCHARGER_1" lnClass="TurboCharger" inst="1" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/TURBOCHARGER_1" lnClass="TurboCharger" inst="2" prefix="" desc="">
+      </LN>
+    </LDevice>
+    <LDevice inst="ScavExhaust" desc="">
+    	<LN lnType="ACONIS/SENSOR_Pres" lnClass="Sensor" inst="" prefix="ScavAirInlet" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_Temp" lnClass="Sensor" inst="" prefix="ScavAirRecv" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_Ind"  lnClass="Sensor" inst="" prefix="ScavAirDrain" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_Ind"  lnClass="Sensor" inst="" prefix="AirCoolDrain" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_Pres" lnClass="Sensor" inst="" prefix="ExhValveAir" desc="">
+      </LN>
+    </LDevice>
+    <LDevice inst="CoolingFreshWater" desc="">
+    	<LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="1" prefix="Main" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="2" prefix="Main" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="3" prefix="Main" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="1" prefix="Cent" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="2" prefix="Cent" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="3" prefix="Cent" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="1" prefix="Jacket" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="2" prefix="Jacket" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_Temp" lnClass="Sensor" inst="1" prefix="AirCirOut" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_Temp" lnClass="Sensor" inst="2" prefix="AirCirOut" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_Pres" lnClass="Sensor" inst="" prefix="AirCirInlet" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_2" lnClass="Sensor" inst="" prefix="CylinderInlet" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_2" lnClass="Sensor" inst="" prefix="MainPumpOut" desc="">
+      </LN>
+      <LN lnType="ACONIS/SENSOR_Pres" lnClass="Sensor" inst="" prefix="CentPumpOut" desc="">
+      </LN>
+    </LDevice>	
+    <LDevice inst="LubOil" desc="">
+    	<LN lnType="ACONIS/PURIFIER_1" lnClass="Purifier" inst="1" prefix="Main" desc="">
+      </LN>
+      <LN lnType="ACONIS/PURIFIER_1" lnClass="Purifier" inst="2" prefix="Main" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_2" lnClass="Pump" inst="1" prefix="Main" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_2" lnClass="Pump" inst="2" prefix="Main" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="1" prefix="HydStartup" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="2" prefix="HydStartup" desc="">
+      </LN>
+    </LDevice>
+    <LDevice inst="FuelOil" desc="">
+    	<LN lnType="ACONIS/PURIFIER_1" lnClass="Purifier" inst="1" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/PURIFIER_1" lnClass="Purifier" inst="2" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/PURIFIER_1" lnClass="Purifier" inst="3" prefix="" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="1" prefix="Circ" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="1" prefix="Circ" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="1" prefix="Supply" desc="">
+      </LN>
+      <LN lnType="ACONIS/PUMP_1" lnClass="Pump" inst="1" prefix="Supply" desc="">
+      </LN>
+    </LDevice>
+  </System>
+
+  <DataTypeTemplates>       
+    <LNodeType id="ACONIS/CYLINDER_1" lnClass="Cylinder">
+    	<DO name="ScavAirFireBoxTemp" type="ACONIS/MV_1" />
+    	<DO name="ExhGasOutTemp"      type="ACONIS/MV_1" />
+    	<DO name="ExhGasOutTempDev"   type="ACONIS/MV_1" />
+    	<DO name="PistonCOOutTemp"    type="ACONIS/MV_1" />    	
+    	<DO name="CFWOutTemp"         type="ACONIS/MV_1" />
+    	<DO name="MainBrgFwdTemp"     type="ACONIS/MV_1" />
+    	<DO name="MainBrgAftTemp"     type="ACONIS/MV_1" />
+    	<DO name="CrankPinBrgTemp"    type="ACONIS/MV_1" />
+    	<DO name="PistonCONonFlow"    type="ACONIS/SPS_1" />
+    </LNodeType>
+    <LNodeType id="ACONIS/TURBOCHARGER_1" lnClass="TurboCharger">
+    	<DO name="RPM          "      type="ACONIS/MV_1" />
+    	<DO name="ExhGasOutTemp"      type="ACONIS/MV_1" />
+    	<DO name="ExhGasInletTemp"    type="ACONIS/MV_1" />
+    	<DO name="LubOilOutTemp"      type="ACONIS/MV_1" />
+    	<DO name="LubOilInletPres"    type="ACONIS/MV_1" />
+    	<DO name="LubOilInletPresLow" type="ACONIS/SPS_1" />
+    </LNodeType>    
+    <LNodeType id="ACONIS/SENSOR_1" lnClass="Sensor">
+    	<DO name="Temperature" type="ACONIS/MV_1" />
+    	<DO name="Pressure"    type="ACONIS/MV_1" />
+    	<DO name="Level"       type="ACONIS/MV_1" />
+    	<DO name="Indication"  type="ACONIS/SPS_1" />
+    </LNodeType>
+    <LNodeType id="ACONIS/SENSOR_2" lnClass="Sensor">   
+    	<DO name="Temperature" type="ACONIS/MV_1" />    	 	
+    	<DO name="Pressure"    type="ACONIS/MV_1" />    	
+    </LNodeType>
+    <LNodeType id="ACONIS/SENSOR_Pres" lnClass="Sensor">    	
+    	<DO name="Pressure"    type="ACONIS/MV_1" />    	
+    </LNodeType>
+    <LNodeType id="ACONIS/SENSOR_Temp" lnClass="Sensor">
+    	<DO name="Temperature" type="ACONIS/MV_1" />    	
+    </LNodeType>
+    <LNodeType id="ACONIS/SENSOR_Ind" lnClass="Sensor">
+    	<DO name="Indication"  type="ACONIS/SPS_1" />    	
+    </LNodeType>
+    
+    <LNodeType id="ACONIS/PUMP_1" lnClass="Pump">
+    	<DO name="Run"         type="ACONIS/SPS_1" />
+    	<DO name="Fail"        type="ACONIS/SPS_1" />
+    </LNodeType>
+    <LNodeType id="ACONIS/PUMP_2" lnClass="Pump">
+    	<DO name="Run"           type="ACONIS/SPS_1" />
+    	<DO name="Fail"          type="ACONIS/SPS_1" />
+    	<DO name="LowInsulation" type="ACONIS/SPS_1" />
+    	<DO name="WindTemp"      type="ACONIS/WYE_1" />
+    </LNodeType>
+    
+    <LNodeType id="ACONIS/PURIFIER_1" lnClass="Purifier">
+    	<DO name="InletTemp"   type="ACONIS/MV_1" />
+    	<DO name="Run"         type="ACONIS/SPS_1" />
+    	<DO name="Abnormal"    type="ACONIS/SPS_1" />
+    </LNodeType>
+    
+    
+    <DOType id="ACONIS/MV_1" cdc="MV">
+      <DA name="val"      bType="Struct" type="ACONIS/AnalogueValue_1" />      
+      <DA name="rangeCfg" bType="Struct" type="ACONIS/RangeConfig_1" />
+      <DA name="units"    bType="Struct" type="ACONIS/Unit_1" />
+      <DA name="range"    bType="Enum"   type="ACONIS/Range_1" />
+      <DA name="q"        bType="Enum"   type="ACONIS/Quality_1" />
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+    <DOType id="ACONIS/MV_2" cdc="MV">
+      <DA name="val"      bType="Struct" type="ACONIS/AnalogueValue_1" />
+      <DA name="q"        bType="Enum"   type="ACONIS/Quality_1" />
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+    <DOType id="ACONIS/SPS_1" cdc="SPS">
+      <DA name="stVal"    bType="BOOLEAN" />      
+      <DA name="q"        bType="Enum"   type="ACONIS/Quality_1" />
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+    <DOType id="ACONIS/WYE_1" cdc="WYE">
+      <SDO name="phsR" type="ACONIS/MV_1" />
+      <SDO name="phsS" type="ACONIS/MV_1" />
+      <SDO name="phsT" type="ACONIS/MV_1" />      
+    </DOType>
+
+    <DAType id="ACONIS/AnalogueValue_1">
+      <BDA name="f"      bType="FLOAT" />
+    </DAType>
+    <DAType id="ACONIS/RangeConfig_1">
+      <BDA name="min"    bType="FLOAT" />
+      <BDA name="max"    bType="FLOAT" />
+      <BDA name="lLim"   bType="FLOAT" />
+      <BDA name="llLim"  bType="FLOAT" />
+      <BDA name="hLim"   bType="FLOAT" />
+      <BDA name="hhLim"  bType="FLOAT" />
+    </DAType>
+    <DAType id="ACONIS/Unit_1">
+      <BDA name="SIUnit"     bType="Enum" type="ACONIS/SIUnit_1" />
+      <BDA name="multiplier" bType="Enum" type="ACONIS/multiplier_1" />
+    </DAType>
+
+    <EnumType id="ACONIS/Range_1">
+      <EnumVal ord="0">Normal</EnumVal>
+      <EnumVal ord="1">Warning</EnumVal>
+      <EnumVal ord="2">Critical</EnumVal>
+    </EnumType>
+    <EnumType id="ACONIS/Quality_1">
+      <EnumVal ord="0">Good</EnumVal>
+      <EnumVal ord="1">Invalid</EnumVal>
+      <EnumVal ord="2">Questionable</EnumVal>
+    </EnumType>    
+    <EnumType id="ACONIS/SIUnit_1">
+      <EnumVal ord="1" />
+      <EnumVal ord="2">m</EnumVal>
+      <EnumVal ord="3">kg</EnumVal>
+      <EnumVal ord="4">s</EnumVal>
+      <EnumVal ord="5">A</EnumVal>
+      <EnumVal ord="6">K</EnumVal>
+      <EnumVal ord="7">mol</EnumVal>
+      <EnumVal ord="8">cd</EnumVal>
+      <EnumVal ord="9">deg</EnumVal>
+      <EnumVal ord="10">rad</EnumVal>
+      <EnumVal ord="11">sr</EnumVal>
+      <EnumVal ord="21">Gy</EnumVal>
+      <EnumVal ord="22">q</EnumVal>
+      <EnumVal ord="23">°C</EnumVal>
+      <EnumVal ord="24">Sv</EnumVal>
+      <EnumVal ord="25">F</EnumVal>
+      <EnumVal ord="26">C</EnumVal>
+      <EnumVal ord="27">S</EnumVal>
+      <EnumVal ord="28">H</EnumVal>
+      <EnumVal ord="29">V</EnumVal>
+      <EnumVal ord="30">ohm</EnumVal>
+      <EnumVal ord="31">J</EnumVal>
+      <EnumVal ord="32">N</EnumVal>
+      <EnumVal ord="33">Hz</EnumVal>
+      <EnumVal ord="34">lx</EnumVal>
+      <EnumVal ord="35">Lm</EnumVal>
+      <EnumVal ord="36">Wb</EnumVal>
+      <EnumVal ord="37">T</EnumVal>
+      <EnumVal ord="38">W</EnumVal>
+      <EnumVal ord="39">Pa</EnumVal>
+      <EnumVal ord="41">m²</EnumVal>
+      <EnumVal ord="42">m³</EnumVal>
+      <EnumVal ord="43">m/s</EnumVal>
+      <EnumVal ord="44">m/s²</EnumVal>
+      <EnumVal ord="45">m³/s</EnumVal>
+      <EnumVal ord="46">m/m³</EnumVal>
+      <EnumVal ord="47">M</EnumVal>
+      <EnumVal ord="48">kg/m³</EnumVal>
+      <EnumVal ord="49">m²/s</EnumVal>
+      <EnumVal ord="50">W/m K</EnumVal>
+      <EnumVal ord="51">J/K</EnumVal>
+      <EnumVal ord="52">ppm</EnumVal>
+      <EnumVal ord="53">1/s</EnumVal>
+      <EnumVal ord="54">rad/s</EnumVal>
+      <EnumVal ord="61">VA</EnumVal>
+      <EnumVal ord="62">Watts</EnumVal>
+      <EnumVal ord="63">VAr</EnumVal>
+      <EnumVal ord="64">phi</EnumVal>
+      <EnumVal ord="65">cos(phi)</EnumVal>
+      <EnumVal ord="66">Vs</EnumVal>
+      <EnumVal ord="67">V²</EnumVal>
+      <EnumVal ord="68">As</EnumVal>
+      <EnumVal ord="69">A²</EnumVal>
+      <EnumVal ord="70">A²t</EnumVal>
+      <EnumVal ord="71">VAh</EnumVal>
+      <EnumVal ord="72">Wh</EnumVal>
+      <EnumVal ord="73">VArh</EnumVal>
+      <EnumVal ord="74">V/Hz</EnumVal>
+    </EnumType>
+    <EnumType id="ACONIS/multiplier_1">
+      <EnumVal ord="-24">y</EnumVal>
+      <EnumVal ord="-21">z</EnumVal>
+      <EnumVal ord="-18">a</EnumVal>
+      <EnumVal ord="-15">f</EnumVal>
+      <EnumVal ord="-12">p</EnumVal>
+      <EnumVal ord="-9">n</EnumVal>
+      <EnumVal ord="-6">μ</EnumVal>
+      <EnumVal ord="-3">m</EnumVal>
+      <EnumVal ord="-2">c</EnumVal>
+      <EnumVal ord="-1">d</EnumVal>
+      <EnumVal ord="0" />
+      <EnumVal ord="1">da</EnumVal>
+      <EnumVal ord="2">h</EnumVal>
+      <EnumVal ord="3">k</EnumVal>
+      <EnumVal ord="6">M</EnumVal>
+      <EnumVal ord="9">G</EnumVal>
+      <EnumVal ord="12">T</EnumVal>
+      <EnumVal ord="15">P</EnumVal>
+      <EnumVal ord="18">E</EnumVal>
+      <EnumVal ord="21">Z</EnumVal>
+      <EnumVal ord="24">Y</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</VCL>

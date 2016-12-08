@@ -1,0 +1,1742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VCL>
+  <Header id="VDM_for_ACONIS_LC_VDR" version="0" revision="6" toolID="HHI VDM Mapping Tool ver 1.0" >
+    <Text>Vessel Data Model for ACONIS/LoadingComputer/VDR ProtoType</Text>
+    <History>
+      <Hitem version="0" revision="6" when="Monday, June 22, 2015 01:00:00 PM" who="Jeehoon Park" what="" why=""/>
+    </History>
+  </Header>
+
+  <Vessel imo="1111111" name="GoingMary" type="Container" vendor="HHI">
+    <EquipmentGroup name="Mechanical" desc="">
+      <Equipment name="Machinery" desc="">
+      	<Component name="DieselEngine" desc="">
+      		<ConnectivityNode systemName="ACONIS" ldInst="MainEngine" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="GECommonDevice" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="GeneratorEngine1" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="GeneratorEngine2" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="GeneratorEngine3" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="GeneratorEngine4" />
+      	</Component>
+      	<ConnectivityNode systemName="ACONIS" ldInst="SteeringGear" />
+      	<ConnectivityNode systemName="ACONIS" ldInst="Shaft" />
+      </Equipment>   
+      <Equipment name="Pressurised" desc="">  
+      	<Component name="Boiler" desc="">
+      		<ConnectivityNode systemName="ACONIS" ldInst="AuxBoiler1" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="AuxBoiler2" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="AuxBoiler3" />
+      		<ConnectivityNode systemName="ACONIS" ldInst="AuxBoiler4" />
+      	</Component>
+      	<ConnectivityNode systemName="ACONIS" ldInst="SteamGenerator" />
+      </Equipment>
+    </EquipmentGroup>
+    <EquipmentGroup name="Hull" desc="">
+    	<Equipment name="Compartments" desc="">
+    		<ConnectivityNode systemName="ACONIS" ldInst="TankOverview" />
+    		<ConnectivityNode systemName="ACONIS" ldInst="CargoTanks" />
+    		<ConnectivityNode systemName="ACONIS" ldInst="BallastWaterTanks" />
+    		<ConnectivityNode systemName="ACONIS" ldInst="FuelOilTanks" />
+    		<ConnectivityNode systemName="ACONIS" ldInst="DieselOilTanks" />
+    		<ConnectivityNode systemName="ACONIS" ldInst="GasOilTanks" />
+    		<ConnectivityNode systemName="ACONIS" ldInst="LubOilTanks" />
+    		<ConnectivityNode systemName="ACONIS" ldInst="FreshWaterTanks" />
+    		<ConnectivityNode systemName="ACONIS" ldInst="MiscTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="TankOverview" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="CargoTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="BallastWaterTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="FuelOilTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="DieselOilTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="GasOilTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="LubOilTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="FreshWaterTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="MiscTanks" />    		
+    	</Equipment>
+    	<Equipment name="Bottom" desc="">
+    		<ConnectivityNode systemName="ACONIS" ldInst="Bilge" />
+    	</Equipment>	
+    	<Equipment name="Stability" desc="">
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="LoadCondition" />
+    	</Equipment>	
+    </EquipmentGroup>
+    <EquipmentGroup name="Navigational" desc="">
+    	<Equipment name="Measurement" desc="">
+    		<ConnectivityNode systemName="VDR" ldInst="PositioningDevice" />
+    		<ConnectivityNode systemName="VDR" ldInst="HeadingDevice" />
+    		<ConnectivityNode systemName="VDR" ldInst="SDMEDevice" />
+    		<ConnectivityNode systemName="VDR" ldInst="CollisionAvoidanceDevice" />
+    		<ConnectivityNode systemName="VDR" ldInst="ChartDevice" />
+    		<ConnectivityNode systemName="VDR" ldInst="MotionDevice" />
+    		<ConnectivityNode systemName="VDR" ldInst="AuxiliaryDevice" />
+    	</Equipment>	
+    	<Equipment name="Control" desc="">
+    		<ConnectivityNode systemName="VDR" ldInst="PropulsionDevice" />
+    		<ConnectivityNode systemName="VDR" ldInst="ThrustDevice" />
+    		<ConnectivityNode systemName="VDR" ldInst="SteeringDevice" />
+    	</Equipment>
+    </EquipmentGroup>
+    <EquipmentGroup name="Environmental" desc="">    	
+    	<Equipment name="Measurement" desc="">
+    		<ConnectivityNode systemName="VDR" ldInst="ClimateSensor" />
+    	</Equipment>
+    </EquipmentGroup>	
+    <EquipmentGroup name="Cargo" desc="">    	
+    	<Equipment name="CargoManagement" desc="">
+    		<ConnectivityNode systemName="ACONIS" ldInst="CargoTanks" />
+    		<ConnectivityNode systemName="LoadingComputer" ldInst="CargoTanks" />
+    	</Equipment>
+    </EquipmentGroup>	
+  </Vessel>
+
+  <System name="ACONIS" vendor="Hyundai Heavy Industries" desc="">
+  	<LDevice inst="MainEngine" desc="">
+  		<LN lnType="ACONIS/EngineCommonSensor_1"  prefix="Common" lnClass="Sensor" inst="" desc="">
+      </LN>
+  		<LN lnType="ACONIS/Pump_1"  prefix="JacketCFW" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="JacketCFW" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="CentralCFW" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="CentralCFW" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="CentralCFW" lnClass="Pump" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="CSW" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="CSW" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="CSW" lnClass="Pump" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/PreHeater_1"  prefix="JacketCFW" lnClass="PreHeater" inst="1" desc="">
+      </LN>
+  		<LN lnType="ACONIS/AirCooler_1"  prefix="" lnClass="AirCooler" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/AirCooler_1"  prefix="" lnClass="AirCooler" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="CFWSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="CFWSystem" lnClass="Sensor" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Purifier_1"  prefix="HFO" lnClass="Purifier" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Purifier_1"  prefix="HFO" lnClass="Purifier" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Purifier_1"  prefix="HFO" lnClass="Purifier" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FOSupply" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FOSupply" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FOCirc" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FOCirc" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/PreHeater_1"  prefix="FO" lnClass="PreHeater" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="FOAuto" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOInlet" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOOutlet" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOSystem" lnClass="Sensor" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Purifier_1"  prefix="LO" lnClass="Purifier" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Purifier_1"  prefix="LO" lnClass="Purifier" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Purifier_1"  prefix="LO" lnClass="Purifier" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="MainLO" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="MainLO" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/PreHeater_1"  prefix="LO" lnClass="PreHeater" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="LO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LOSystem" lnClass="Sensor" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="HydStartup" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="HydStartup" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="HydStartup" lnClass="Pump" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="ChargeAir" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="StartAir" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="ScavAirSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="ScavAirSystem" lnClass="Sensor" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/TurboCharger_1"  prefix="" lnClass="TurboCharger" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/TurboCharger_1"  prefix="" lnClass="TurboCharger" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/MECylinder_1"  prefix="" lnClass="Cylinder" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/MEControllerData_1"  prefix="" lnClass="ControllerData" inst="" desc="">
+      </LN>
+		</LDevice>
+		<LDevice inst="GECommonDevice" desc="">		
+			<LN lnType="ACONIS/Purifier_1"  prefix="LO" lnClass="Purifier" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Purifier_1"  prefix="LO" lnClass="Purifier" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FOSupply" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FOSupply" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FOBooster" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FOBooster" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="MGOSupply" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/PreHeater_1"  prefix="FO" lnClass="PreHeater" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="FOAuto" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+		</LDevice>
+		<LDevice inst="GeneratorEngine1" desc="">
+			<LN lnType="ACONIS/EngineCommonSensor_1"  prefix="Common" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="PreLubOil" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/PreHeater_1"  prefix="JacketCFW" lnClass="PreHeater" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="LO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="FO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="HTCFWInlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="HTCFWOutlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LTCFWInlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LTCFWOutlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/TurboCharger_1"  prefix="" lnClass="TurboCharger" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/GEControllerData_1"  prefix="" lnClass="ControllerData" inst="" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="GeneratorEngine2" desc="">
+			<LN lnType="ACONIS/EngineCommonSensor_1"  prefix="Common" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="PreLubOil" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/PreHeater_1"  prefix="JacketCFW" lnClass="PreHeater" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="LO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="FO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="HTCFWInlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="HTCFWOutlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LTCFWInlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LTCFWOutlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/TurboCharger_1"  prefix="" lnClass="TurboCharger" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/GEControllerData_1"  prefix="" lnClass="ControllerData" inst="" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="GeneratorEngine3" desc="">
+			<LN lnType="ACONIS/EngineCommonSensor_1"  prefix="Common" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="PreLubOil" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/PreHeater_1"  prefix="JacketCFW" lnClass="PreHeater" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="LO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="FO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="HTCFWInlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="HTCFWOutlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LTCFWInlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LTCFWOutlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/TurboCharger_1"  prefix="" lnClass="TurboCharger" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/GEControllerData_1"  prefix="" lnClass="ControllerData" inst="" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="GeneratorEngine4" desc="">
+			<LN lnType="ACONIS/EngineCommonSensor_1"  prefix="Common" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="PreLubOil" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/PreHeater_1"  prefix="JacketCFW" lnClass="PreHeater" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="LO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Filter_1"  prefix="FO" lnClass="Filter" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="HTCFWInlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="HTCFWOutlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LTCFWInlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LTCFWOutlet" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="LOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Sensor_1"  prefix="FOSystem" lnClass="Sensor" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/TurboCharger_1"  prefix="" lnClass="TurboCharger" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/GECylinder_1"  prefix="" lnClass="Cylinder" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/GEControllerData_1"  prefix="" lnClass="ControllerData" inst="" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="SteeringGear" desc="">
+		  <LN lnType="ACONIS/SteeringGear_1"  prefix="" lnClass="SteeringGear" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/SteeringGear_1"  prefix="" lnClass="SteeringGear" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/SteeringGear_1"  prefix="" lnClass="SteeringGear" inst="3" desc="">
+      </LN> 
+      <LN lnType="ACONIS/SteeringGearSystem_1"  prefix="Common" lnClass="System" inst="" desc="">
+      </LN>
+		</LDevice>
+		<LDevice inst="Shaft" desc="">
+			<LN lnType="ACONIS/Pump_1"  prefix="LubOil" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="LubOil" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FwdSealLubOil" lnClass="Pump" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FwdSealLubOil" lnClass="Pump" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/ShaftSystem_1"  prefix="Common" lnClass="System" inst="" desc="">
+      </LN>
+		
+		</LDevice>
+		<LDevice inst="AuxBoiler1" desc="">
+			<LN lnType="ACONIS/Pump_1"  prefix="Circ" lnClass="Pump" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FeedWater" lnClass="Pump" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FuelOil" lnClass="Pump" inst="" desc="">
+      </LN>		
+		</LDevice>
+		<LDevice inst="AuxBoiler2" desc="">
+			<LN lnType="ACONIS/Pump_1"  prefix="Circ" lnClass="Pump" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FeedWater" lnClass="Pump" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Pump_1"  prefix="FuelOil" lnClass="Pump" inst="" desc="">
+      </LN>		
+		</LDevice>
+		<LDevice inst="SteamGenerator" desc="">
+		  <LN lnType="ACONIS/FeedWaterSystem_1"  prefix="FeedWater" lnClass="System" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/BoilerSystem_1"  prefix="Boiler" lnClass="System" inst="" desc="">
+      </LN>
+		</LDevice>
+		<LDevice inst="TankOverview" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="Cargo" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="BallastWater" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="FuelOil" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="DieselOil" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="GasOil" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="LubOil" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="FreshWater" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="Misc" lnClass="Tank" inst="" desc="">
+      </LN>
+		</LDevice>
+		<LDevice inst="CargoTanks" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="BallastWaterTanks" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="FuelOilTanks" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="DieselOilTanks" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="GasOilTanks" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="LubOilTanks" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="FreshWaterTanks" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="MiscTanks" desc="">
+			<LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="ACONIS/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="Bilge" desc="">
+			<LN lnType="ACONIS/Well_1"  prefix="" lnClass="Well" inst="1" desc="">
+      </LN>
+      <LN lnType="ACONIS/Well_1"  prefix="" lnClass="Well" inst="2" desc="">
+      </LN>
+		</LDevice>		
+  </System>
+  <System name="LoadingComputer" vendor="TechMarine" desc="">
+  	<LDevice inst="LoadCondition" desc="">
+  		<LN lnType="LoadingComputer/Weight_1"  prefix="Vessel" lnClass="Weight" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Draft_1"  prefix="Fore" lnClass="Draft" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Draft_1"  prefix="MidPort" lnClass="Draft" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Draft_1"  prefix="MidStbd" lnClass="Draft" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Draft_1"  prefix="Aft" lnClass="Draft" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Draft_1"  prefix="Lcf" lnClass="Draft" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/HeelTrimSensor_1"  prefix="Tilt" lnClass="Sensor" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Immersion_1"  prefix="Propeller" lnClass="Immersion" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/StabilityMetric_1"  prefix="" lnClass="StabilityMetric" inst="" desc="">
+      </LN>      
+  	</LDevice>
+  	<LDevice inst="TankOverview" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="Cargo" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="BallastWater" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="FuelOil" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="DieselOil" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="GasOil" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="LubOil" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="FreshWater" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="Misc" lnClass="Tank" inst="" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Weight_1"  prefix="Const" lnClass="Weight" inst="" desc="">
+      </LN>
+		</LDevice>
+		<LDevice inst="CargoTanks" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>      
+		</LDevice>
+		<LDevice inst="BallastWaterTanks" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>  
+		</LDevice>
+		<LDevice inst="FuelOilTanks" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>  
+		</LDevice>
+		<LDevice inst="DieselOilTanks" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>  
+		</LDevice>
+		<LDevice inst="GasOilTanks" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>  
+		</LDevice>
+		<LDevice inst="LubOilTanks" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>  
+		</LDevice>
+		<LDevice inst="FreshWaterTanks" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>  
+		</LDevice>
+		<LDevice inst="MiscTanks" desc="">
+			<LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="1" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="2" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="3" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="4" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="5" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="6" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="7" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="8" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="9" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="10" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="11" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="12" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="13" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="14" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="15" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="16" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="17" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="18" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="19" desc="">
+      </LN>
+      <LN lnType="LoadingComputer/Tank_1"  prefix="" lnClass="Tank" inst="20" desc="">
+      </LN>  
+		</LDevice>
+  </System>
+  <System name="VDR" vendor="JRC" desc="">
+  	
+  	<LDevice inst="PositioningDevice" desc="">
+  		<LN lnType="VDR/GPSSensor_1"  prefix="GPS" lnClass="Sensor" inst="1" desc="">
+      </LN> 
+      <LN lnType="VDR/GPSSensor_1"  prefix="GPS" lnClass="Sensor" inst="2" desc="">
+      </LN> 
+  	</LDevice>
+  	<LDevice inst="HeadingDevice" desc="">
+  		<LN lnType="VDR/GyroSensor_1"  prefix="Gyro" lnClass="Sensor" inst="1" desc="">
+      </LN> 
+      <LN lnType="VDR/GyroSensor_1"  prefix="Gyro" lnClass="Sensor" inst="2" desc="">
+      </LN> 
+  	</LDevice>
+  	<LDevice inst="SDMEDevice" desc="">
+  		<LN lnType="VDR/SpeedSensor_1"  prefix="Speed" lnClass="Sensor" inst="1" desc="">
+      </LN> 
+      <LN lnType="VDR/SpeedSensor_1"  prefix="Speed" lnClass="Sensor" inst="2" desc="">
+      </LN> 
+      <LN lnType="VDR/DepthSensor_1"  prefix="Depth" lnClass="Sensor" inst="1" desc="">
+      </LN> 
+      <LN lnType="VDR/DepthSensor_1"  prefix="Depth" lnClass="Sensor" inst="2" desc="">
+      </LN> 
+  	</LDevice>
+  	
+  	<LDevice inst="CollisionAvoidanceDevice" desc="">
+  	</LDevice>
+  	<LDevice inst="ChartDevice" desc="">
+  	</LDevice>
+  	<LDevice inst="MotionDevice" desc="">
+  	</LDevice>
+  	
+  	<LDevice inst="AuxiliaryDevice" desc="">
+  		<LN lnType="VDR/WindSensor_1"  prefix="Wind" lnClass="Sensor" inst="1" desc="">
+      </LN> 
+      <LN lnType="VDR/RPMSensor_1"  prefix="RPM" lnClass="Sensor" inst="1" desc="">
+      </LN> 
+      <LN lnType="VDR/ThrusterSensor_1"  prefix="Thruster" lnClass="Sensor" inst="1" desc="">
+      </LN> 
+      <LN lnType="VDR/RudderSensor_1"  prefix="Rudder" lnClass="Sensor" inst="1" desc="">
+      </LN>   		
+  	</LDevice>
+  	<LDevice inst="PropulsionDevice" desc="">
+  		<LN lnType="VDR/Propulsion_1"  prefix="" lnClass="Propulsion" inst="1" desc="">
+      </LN>
+      <LN lnType="VDR/Propulsion_1"  prefix="" lnClass="Propulsion" inst="2" desc="">
+      </LN>
+  	</LDevice>
+  	<LDevice inst="ThrustDevice" desc="">
+  		<LN lnType="VDR/Thruster_1"  prefix="Bow" lnClass="Thruster" inst="" desc="">
+      </LN>
+      <LN lnType="VDR/Thruster_1"  prefix="Stern" lnClass="Thruster" inst="" desc="">
+      </LN>
+  	</LDevice>
+  	<LDevice inst="SteeringDevice" desc="">
+  		<LN lnType="VDR/Rudder_1"  prefix="Single" lnClass="Rudder" inst="" desc="">
+      </LN>
+      <LN lnType="VDR/Rudder_1"  prefix="Stbd" lnClass="Rudder" inst="" desc="">
+      </LN>
+      <LN lnType="VDR/Rudder_1"  prefix="Port" lnClass="Rudder" inst="" desc="">
+      </LN>
+  	</LDevice>
+  	<LDevice inst="ClimateSensor" desc="">
+  	</LDevice>
+  	
+  </System>	
+  	
+
+  <DataTypeTemplates>
+  	<LNodeType id="ACONIS/Pump_1" lnClass="Pump">
+  		<DO name="Mode"  type="ACONIS/BasicMode_1" />
+  		<DO name="Inlet" type="ACONIS/FlowMeter_1" />
+  		<DO name="Outlet" type="ACONIS/FlowMeter_1" />
+  		<DO name="WindingTemperature" type="ACONIS/ThreePhase_1" />
+  	</LNodeType>  	
+  	<LNodeType id="ACONIS/PreHeater_1" lnClass="PreHeater">
+  		<DO name="Mode"  type="ACONIS/BasicMode_1" />
+  		<DO name="Inlet" type="ACONIS/FlowMeter_1" />
+  		<DO name="Outlet" type="ACONIS/FlowMeter_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/AirCooler_1" lnClass="AirCooler">
+  		<DO name="Mode"  type="ACONIS/BasicMode_1" />
+  		<DO name="Inlet" type="ACONIS/FlowMeter_1" />
+  		<DO name="Outlet" type="ACONIS/FlowMeter_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/Purifier_1" lnClass="Purifier">
+  		<DO name="Mode"  type="ACONIS/BasicMode_1" />
+  		<DO name="Inlet" type="ACONIS/FlowMeter_1" />
+  		<DO name="Internal" type="ACONIS/FlowMeter_1" />
+  		<DO name="Outlet" type="ACONIS/FlowMeter_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/Filter_1" lnClass="Filter">
+  		<DO name="Mode"  type="ACONIS/BasicMode_1" />
+  		<DO name="Inlet" type="ACONIS/FlowMeter_1" />
+  		<DO name="Outlet" type="ACONIS/FlowMeter_1" />  	
+  		<DO name="DifferentialPressure" type="ACONIS/MeasuredValue_1" />	
+  	</LNodeType>
+  	<LNodeType id="ACONIS/Sensor_1" lnClass="Sensor">
+  		<DO name="Temperature" type="ACONIS/MeasuredValue_1" />
+  		<DO name="Pressure"    type="ACONIS/MeasuredValue_1" />
+  		<DO name="Level"       type="ACONIS/MeasuredValue_1" />
+  		<DO name="Viscosity"   type="ACONIS/MeasuredValue_1" />
+  		<DO name="FlowRate"    type="ACONIS/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/EngineCommonSensor_1" lnClass="Sensor">
+  		<DO name="RPM"         type="ACONIS/Order_1" />
+  		<DO name="FuelIndex"   type="ACONIS/MeasuredValue_1" />
+  		<DO name="Load"        type="ACONIS/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/TurboCharger_1" lnClass="TurboCharger">
+    	<DO name="RPM"      type="ACONIS/MeasuredValue_1" />
+    	<DO name="LOInlet"  type="ACONIS/FlowMeter_1" />
+    	<DO name="LOOutlet" type="ACONIS/FlowMeter_1" />
+    	<DO name="ExhGasInlet1" type="ACONIS/FlowMeter_1" />
+    	<DO name="ExhGasInlet2" type="ACONIS/FlowMeter_1" />
+    	<DO name="ExhGasOutlet" type="ACONIS/FlowMeter_1" />    	
+    </LNodeType>
+  	<LNodeType id="ACONIS/MECylinder_1" lnClass="Cylinder">
+    	<DO name="ScavAirFireBoxTemp" type="ACONIS/MeasuredValue_1" />
+    	<DO name="ExhGasTemp"      type="ACONIS/MeasuredValue_1" />
+    	<DO name="ExhGasTempDev"   type="ACONIS/MeasuredValue_1" />
+    	<DO name="PistonCOOutTemp"    type="ACONIS/MeasuredValue_1" />    	
+    	<DO name="PistonCONonFlow"    type="ACONIS/SinglePointStatus_1" />
+    	<DO name="CWOutletTemp"         type="ACONIS/MeasuredValue_1" />
+    	<DO name="MainBrgFwdTemp"     type="ACONIS/MeasuredValue_1" />
+    	<DO name="MainBrgAftTemp"     type="ACONIS/MeasuredValue_1" />
+    	<DO name="CrankPinBrgTemp"    type="ACONIS/MeasuredValue_1" />    	
+    </LNodeType>
+    <LNodeType id="ACONIS/GECylinder_1" lnClass="Cylinder">    	
+    	<DO name="ExhGasTemp"      type="ACONIS/MeasuredValue_1" />
+    	<DO name="ExhGasTempDev"   type="ACONIS/MeasuredValue_1" />    	
+    </LNodeType>
+    <LNodeType id="ACONIS/MEControllerData_1" lnClass="ControllerData">
+  		<DO name="AtSea" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="StandBy" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="EngineNotReady" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="StartBlock" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="StartFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="SBFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="FEFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="OverSpeed" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="CriticalSpeed" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="WrongWay" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="SlowDownRequest" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="SlowDownOverride" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="SlowDownPrewarning" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="ShutDownOverride" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="ShutDownPrewarning" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="ManualShutDown" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="EmergencyShutDown" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="AutoEmergencySlowDown" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="OilMistHigh" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="OilMistDetectorFail" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="AxialVibrationHigh" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="AxialVibrationAbnormal" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="DamperInletPresLow" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="DamperAbnormal" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="BearingWearAlarm" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="BearingWearMonitoringSysFail" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="InperfectBrgControl" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="TelegraphSourceFail" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="TelegraphSysAbnormal" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="TelegraphLogSysAbnormal" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="BrgSourceFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="BridgeControlPosition" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="ECRControlPosition" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="LocalControlPosition" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="RemoteControlSysPowerFail" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="RemoteControlSysAbnormal" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="SaftySysPoweFail" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="SaftySysAbnormal" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="GovernorSysPowerFail" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="GovernorSysAbnormal" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="RPMDetectorLoopFail" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="EmergencyStopLoopFail" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="FuelIndex" type="ACONIS/MeasuredValue_1" />
+  		<DO name="ThrustBrgTemp" type="ACONIS/MeasuredValue_1" />
+  		<DO name="ThrustBrgRadialTemp" type="ACONIS/MeasuredValue_1" />
+  		<DO name="ThrustBrgSegTemp" type="ACONIS/MeasuredValue_1" />
+  		<DO name="RPMOrdered" type="ACONIS/MeasuredValue_1" />
+  		<DO name="RPMPickup" type="ACONIS/MeasuredValue_1" />
+  	</LNodeType>
+  	<LNodeType id="ACONIS/GEControllerData_1" lnClass="ControllerData">
+  		<DO name="Running" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="OilMistHighStop" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="WaterOutHighStop" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="TripCircuitFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="JetSysFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="ShaftSysFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="MonitoringSysFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="TachoFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="TachoFailTrip" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="ControlSourceFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="GovSourceFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="GovFault" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="StartFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="StopFailure" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="CommonShutDown" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="EmergencyShutDown" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="LocalIndication" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="RemoteIndication" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="TurningGearIngaged" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="RPMPickup" type="ACONIS/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/SteeringGear_1" lnClass="SteeringGear">
+  	  <DO name="MotorOverload" type="ACONIS/SinglePointStatus_1" />
+  	  <DO name="MotorPhaseFail" type="ACONIS/SinglePointStatus_1" />
+  	  <DO name="NoVolt" type="ACONIS/SinglePointStatus_1" />
+  	  <DO name="ControlPowerFail" type="ACONIS/SinglePointStatus_1" />
+  	  <DO name="HydLocking" type="ACONIS/SinglePointStatus_1" />
+  	  <DO name="HydOilTankLevelLow" type="ACONIS/SinglePointStatus_1" />
+  	</LNodeType>
+  	<LNodeType id="ACONIS/SteeringGearSystem_1" lnClass="System">
+  		<DO name="GearPumpAbnormal" type="ACONIS/SinglePointStatus_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/ShaftSystem_1" lnClass="System">
+  		<DO name="Torque" type="ACONIS/MeasuredValue_1" />
+  		<DO name="RPM" type="ACONIS/MeasuredValue_1" />
+  		<DO name="Power" type="ACONIS/MeasuredValue_1" />
+  		<DO name="FwdBrgTemp" type="ACONIS/MeasuredValue_1" />
+  		<DO name="AftBrgTemp" type="ACONIS/MeasuredValue_1" />
+  		<DO name="LubOilTankLevelLow" type="ACONIS/SinglePointStatus_1" />  		
+  		<DO name="LubOilTankLevelHigh" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="LubOilSumpTankLevelLow" type="ACONIS/SinglePointStatus_1" />  		
+  	</LNodeType>	
+  	<LNodeType id="ACONIS/FeedWaterSystem_1" lnClass="System">
+  		<DO name="TankOilContentHigh" type="ACONIS/SinglePointStatus_1" />  		
+  		<DO name="SalinityHigh" type="ACONIS/SinglePointStatus_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/BoilerSystem_1" lnClass="System">
+  		<DO name="SteamPres" type="ACONIS/MeasuredValue_1" />
+  		<DO name="WaterLevel" type="ACONIS/MeasuredValue_1" />
+  		<DO name="FOInletPres" type="ACONIS/MeasuredValue_1" />
+  		<DO name="FOInletTemp" type="ACONIS/MeasuredValue_1" />
+  		<DO name="ExhGasOutletTemp" type="ACONIS/MeasuredValue_1" />
+  		<DO name="EconomizerExhGasTemp" type="ACONIS/MeasuredValue_1" />
+  		<DO name="CommonAbnormal" type="ACONIS/SinglePointStatus_1" />  		
+  		<DO name="CommonTrip" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="FeedFilterTankLevelLow" type="ACONIS/SinglePointStatus_1" />  		
+  	</LNodeType>	
+
+  	<LNodeType id="ACONIS/Tank_1" lnClass="Tank">
+  		<DO name="Level" type="ACONIS/MeasuredValue_1" />
+  		<DO name="Temperature" type="ACONIS/MeasuredValue_1" />
+  		<DO name="Pressure" type="ACONIS/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="ACONIS/Well_1" lnClass="Well">
+  		<DO name="Level" type="ACONIS/MeasuredValue_1" />
+  		<DO name="SternRampWaterLeakage" type="ACONIS/SinglePointStatus_1" />
+  		<DO name="SideRampWaterLeakage" type="ACONIS/SinglePointStatus_1" />  		
+  	</LNodeType>
+
+  	<LNodeType id="LoadingComputer/Tank_1" lnClass="Tank">  		
+  		<DO name="Volume" type="LoadingComputer/MeasuredValue_1" />
+  		<DO name="Weight" type="LoadingComputer/MeasuredValue_1" />
+  		<DO name="COG" type="LoadingComputer/CenterOfGravity_1" />
+  	</LNodeType>
+  	<LNodeType id="LoadingComputer/Weight_1" lnClass="Weight">  		
+  		<DO name="DeadWeight" type="LoadingComputer/MeasuredValue_1" />
+  		<DO name="Displacement" type="LoadingComputer/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="LoadingComputer/Draft_1" lnClass="Draft">  		
+  		<DO name="Distance" type="LoadingComputer/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="LoadingComputer/HeelTrimSensor_1" lnClass="Sensor">
+  		<DO name="Heel"   type="LoadingComputer/MeasuredValue_1" />
+  		<DO name="Trim"   type="LoadingComputer/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="LoadingComputer/Immersion_1" lnClass="Immersion">
+  		<DO name="Ratio"   type="LoadingComputer/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="LoadingComputer/StabilityMetric_1" lnClass="StabilityMetric">
+  		<DO name="COG" type="LoadingComputer/CenterOfGravity_1" />
+  		<DO name="kMt"   type="LoadingComputer/MeasuredValue_1" />
+  		<DO name="GM"   type="LoadingComputer/MeasuredValue_1" />  		
+  		<DO name="GGo"   type="LoadingComputer/MeasuredValue_1" />  		
+  		<DO name="GoM"   type="LoadingComputer/MeasuredValue_1" />  				
+  	</LNodeType>
+  	
+  	<LNodeType id="VDR/GPSSensor_1" lnClass="Sensor">
+  		<DO name="Time"      type="VDR/Time_1" />
+  		<DO name="Position"  type="VDR/Position_1" />
+  		<DO name="SOG"       type="VDR/MeasuredValue_1" />
+  		<DO name="COG"       type="VDR/MeasuredValue_1" />
+  		<DO name="Datum"     type="VDR/Datum_1" />
+  	</LNodeType>
+  	<LNodeType id="VDR/GyroSensor_1" lnClass="Sensor">  		
+  		<DO name="Heading"  type="VDR/MeasuredValue_1" />
+  		<DO name="ROT"      type="VDR/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="VDR/SpeedSensor_1" lnClass="Sensor">  		
+  		<DO name="STW"      type="VDR/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="VDR/DepthSensor_1" lnClass="Sensor">  		
+  		<DO name="Depth"    type="VDR/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="VDR/WindSensor_1" lnClass="Sensor">  		
+  		<DO name="Speed"      type="VDR/MeasuredValue_1" />
+  		<DO name="Direction"  type="VDR/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="VDR/RPMSensor_1" lnClass="Sensor">  		
+  		<DO name="RPM"    type="VDR/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="VDR/ThrusterSensor_1" lnClass="Sensor">  		
+  		<DO name="RPM"      type="VDR/MeasuredValue_1" />  		
+  		<DO name="Pitch"    type="VDR/MeasuredValue_1" />  		
+  		<DO name="Azimuth"  type="VDR/MeasuredValue_1" />  		
+  	</LNodeType>
+  	<LNodeType id="VDR/RudderSensor_1" lnClass="Sensor">  		
+  		<DO name="Angle"    type="VDR/MeasuredValue_1" />  		
+  	</LNodeType>
+  	
+  	<LNodeType id="VDR/Propulsion_1" lnClass="Propulsion">  		
+  		<DO name="RPM"    type="VDR/Order_1" />
+  		<DO name="Pitch"  type="VDR/Order_1" />  		
+  		<DO name="Lever"  type="VDR/Order_1" />
+  	</LNodeType>
+  	<LNodeType id="VDR/Thruster_1" lnClass="Thruster">  		
+  		<DO name="RPM"    type="VDR/Order_1" />
+  		<DO name="Pitch"  type="VDR/Order_1" />  		
+  		<DO name="Lever"  type="VDR/Order_1" />
+  		<DO name="Azimuth"  type="VDR/Order_1" />
+  	</LNodeType>
+  	<LNodeType id="VDR/Rudder_1" lnClass="Rudder">  		
+  		<DO name="Angle"  type="VDR/Order_1" />
+  	</LNodeType>
+  	
+  	
+  	<DOType id="ACONIS/BasicMode_1" cdc="Mode">
+  		<DA name="operation"  bType="Enum"   type="ACONIS/Operation_1" />
+  		<DA name="system"   bType="Enum"   type="ACONIS/System_1" />
+      <DA name="run"      bType="Boolean" />
+      <DA name="abnormal" bType="Boolean" />      
+    </DOType>
+    <DOType id="ACONIS/FlowMeter_1" cdc="Flow">
+      <SDO name="Temperature" type="ACONIS/MeasuredValue_1" />
+      <SDO name="Pressure"    type="ACONIS/MeasuredValue_1" />      
+    </DOType>
+    <DOType id="ACONIS/Order_1" cdc="Order">
+      <SDO name="Order"     type="ACONIS/OrderedValue_1" />
+      <SDO name="Response"  type="ACONIS/MeasuredValue_1" />      
+    </DOType>
+    <DOType id="VDR/Order_1" cdc="Order">
+      <SDO name="Order"     type="VDR/OrderedValue_1" />
+      <SDO name="Response"  type="VDR/MeasuredValue_1" />      
+    </DOType>
+    <DOType id="ACONIS/ThreePhase_1" cdc="WYE">
+      <SDO name="phsR" type="ACONIS/MeasuredValue_1" />
+      <SDO name="phsS" type="ACONIS/MeasuredValue_1" />
+      <SDO name="phsT" type="ACONIS/MeasuredValue_1" />      
+    </DOType>
+    <DOType id="LoadingComputer/CenterOfGravity_1" cdc="COG">
+      <SDO name="LCG"    type="LoadingComputer/MeasuredValue_1" />
+      <SDO name="VCG"    type="LoadingComputer/MeasuredValue_1" />      
+      <SDO name="TCG"    type="LoadingComputer/MeasuredValue_1" />
+    </DOType>
+    <DOType id="VDR/Time_1" cdc="TIME">
+      <SDO name="UTCTime"     type="VDR/UTCTime_1" />
+      <SDO name="Difference"  type="VDR/TimeDifference_1" />      
+    </DOType>
+    <DOType id="VDR/Position_1" cdc="POS">
+      <DA name="latitude"  bType="Struct" type="VDR/Coordinate_1" />
+      <DA name="longitude" bType="Struct" type="VDR/Coordinate_1" />
+      <DA name="altitude"  bType="FLOAT" />  
+    </DOType>
+    <DOType id="VDR/Datum_1" cdc="DTM">
+    	<SDO name="Offset"    type="VDR/Position_1" />
+      <DA name="localDatum" bType="String" />
+      <DA name="subcode"    bType="String" />
+      <DA name="refDatum"   bType="String" />
+    </DOType>
+    
+    <DOType id="ACONIS/MeasuredValue_1" cdc="MV">
+      <DA name="val"      bType="FLOAT" />      
+      <DA name="rangeCfg" bType="Struct" type="ACONIS/RangeConfig_1" />
+      <DA name="units"    bType="Struct" type="ACONIS/Unit_1" />
+      <DA name="alarm"    bType="Struct" type="ACONIS/AlarmStatus_1" />
+      <DA name="q"        bType="Enum"   type="ACONIS/Quality_1" />
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+    <DOType id="LoadingComputer/MeasuredValue_1" cdc="MV">
+      <DA name="val"      bType="FLOAT" />      
+      <DA name="rangeCfg" bType="Struct" type="ACONIS/RangeConfig_1" />
+      <DA name="units"    bType="Struct" type="ACONIS/Unit_1" />
+      <DA name="alarm"    bType="Struct" type="ACONIS/AlarmStatus_1" />
+      <DA name="q"        bType="Enum"   type="ACONIS/Quality_1" />
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+    <DOType id="VDR/MeasuredValue_1" cdc="MV">
+      <DA name="val"      bType="FLOAT" />      
+      <DA name="rangeCfg" bType="Struct" type="ACONIS/RangeConfig_1" />
+      <DA name="units"    bType="Struct" type="ACONIS/Unit_1" />
+      <DA name="alarm"    bType="Struct" type="ACONIS/AlarmStatus_1" />
+      <DA name="q"        bType="Enum"   type="ACONIS/Quality_1" />
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+    <DOType id="ACONIS/SinglePointStatus_1" cdc="SPS">
+      <DA name="stVal"    bType="BOOLEAN" />      
+      <DA name="q"        bType="Enum"   type="ACONIS/Quality_1" />
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+    <DOType id="ACONIS/OrderedValue_1" cdc="OV">
+      <DA name="ctlVal"   bType="FLOAT" />      
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+    <DOType id="VDR/UTCTime_1" cdc="UTC">
+      <DA name="utc"     bType="Timestamp" />
+      <DA name="year"    bType="INT" />
+      <DA name="month"   bType="INT" />
+      <DA name="day"     bType="INT" />
+      <DA name="hour"    bType="INT" />
+      <DA name="minute"  bType="INT" />
+      <DA name="second"  bType="FLOAT" />      
+    </DOType>
+    <DOType id="VDR/TimeDifference_1" cdc="LTM">
+      <DA name="utc"     bType="Timestamp" />      
+      <DA name="hour"    bType="INT" />
+      <DA name="minute"  bType="INT" />     
+    </DOType>
+    <DOType id="VDR/OrderedValue_1" cdc="OV">
+      <DA name="ctlVal"   bType="FLOAT" />      
+      <DA name="t"        bType="Timestamp" />
+    </DOType>
+
+    
+    <DAType id="ACONIS/RangeConfig_1">
+      <BDA name="min"    bType="FLOAT" />
+      <BDA name="max"    bType="FLOAT" />
+      <BDA name="llLim"   bType="FLOAT" />
+      <BDA name="loLim"  bType="FLOAT" />
+      <BDA name="hiLim"   bType="FLOAT" />
+      <BDA name="hhLim"  bType="FLOAT" />
+    </DAType>
+    <DAType id="ACONIS/AlarmStatus_1">
+      <BDA name="ll"      bType="Boolean" />
+      <BDA name="lo"   bType="Boolean" />
+      <BDA name="hi"     bType="Boolean" />
+      <BDA name="hh" bType="Boolean" />      
+    </DAType>
+    <DAType id="ACONIS/Unit_1">
+      <BDA name="SIUnit"     bType="Enum" type="ACONIS/SIUnit_1" />
+      <BDA name="multiplier" bType="Enum" type="ACONIS/multiplier_1" />
+    </DAType>
+    <DAType id="VDR/Coordinate_1">
+      <BDA name="deg" bType="FLOAT" />
+      <BDA name="dir" bType="Enum" type="VDR/Direction_1" />
+    </DAType>
+
+		<EnumType id="VDR/Direction_1">
+      <EnumVal ord="1">North</EnumVal>
+      <EnumVal ord="2">South</EnumVal>
+      <EnumVal ord="3">East</EnumVal>
+      <EnumVal ord="4">West</EnumVal>      
+    </EnumType>
+    <EnumType id="ACONIS/Operation_1">
+      <EnumVal ord="0"></EnumVal>      
+    </EnumType>
+    <EnumType id="ACONIS/System_1">
+      <EnumVal ord="0"></EnumVal>     
+    </EnumType>
+    <EnumType id="ACONIS/Quality_1">
+      <EnumVal ord="0">Good</EnumVal>
+      <EnumVal ord="1">Invalid</EnumVal>
+      <EnumVal ord="2">Questionable</EnumVal>
+    </EnumType>    
+    <EnumType id="ACONIS/SIUnit_1">
+      <EnumVal ord="1" />
+      <EnumVal ord="2">m</EnumVal>
+      <EnumVal ord="3">kg</EnumVal>
+      <EnumVal ord="4">s</EnumVal>
+      <EnumVal ord="5">A</EnumVal>
+      <EnumVal ord="6">K</EnumVal>
+      <EnumVal ord="7">mol</EnumVal>
+      <EnumVal ord="8">cd</EnumVal>
+      <EnumVal ord="9">deg</EnumVal>
+      <EnumVal ord="10">rad</EnumVal>
+      <EnumVal ord="11">sr</EnumVal>
+      <EnumVal ord="21">Gy</EnumVal>
+      <EnumVal ord="22">q</EnumVal>
+      <EnumVal ord="23">°C</EnumVal>
+      <EnumVal ord="24">Sv</EnumVal>
+      <EnumVal ord="25">F</EnumVal>
+      <EnumVal ord="26">C</EnumVal>
+      <EnumVal ord="27">S</EnumVal>
+      <EnumVal ord="28">H</EnumVal>
+      <EnumVal ord="29">V</EnumVal>
+      <EnumVal ord="30">ohm</EnumVal>
+      <EnumVal ord="31">J</EnumVal>
+      <EnumVal ord="32">N</EnumVal>
+      <EnumVal ord="33">Hz</EnumVal>
+      <EnumVal ord="34">lx</EnumVal>
+      <EnumVal ord="35">Lm</EnumVal>
+      <EnumVal ord="36">Wb</EnumVal>
+      <EnumVal ord="37">T</EnumVal>
+      <EnumVal ord="38">W</EnumVal>
+      <EnumVal ord="39">Pa</EnumVal>
+      <EnumVal ord="41">m²</EnumVal>
+      <EnumVal ord="42">m³</EnumVal>
+      <EnumVal ord="43">m/s</EnumVal>
+      <EnumVal ord="44">m/s²</EnumVal>
+      <EnumVal ord="45">m³/s</EnumVal>
+      <EnumVal ord="46">m/m³</EnumVal>
+      <EnumVal ord="47">M</EnumVal>
+      <EnumVal ord="48">kg/m³</EnumVal>
+      <EnumVal ord="49">m²/s</EnumVal>
+      <EnumVal ord="50">W/m K</EnumVal>
+      <EnumVal ord="51">J/K</EnumVal>
+      <EnumVal ord="52">ppm</EnumVal>
+      <EnumVal ord="53">1/s</EnumVal>
+      <EnumVal ord="54">rad/s</EnumVal>
+      <EnumVal ord="61">VA</EnumVal>
+      <EnumVal ord="62">Watts</EnumVal>
+      <EnumVal ord="63">VAr</EnumVal>
+      <EnumVal ord="64">phi</EnumVal>
+      <EnumVal ord="65">cos(phi)</EnumVal>
+      <EnumVal ord="66">Vs</EnumVal>
+      <EnumVal ord="67">V²</EnumVal>
+      <EnumVal ord="68">As</EnumVal>
+      <EnumVal ord="69">A²</EnumVal>
+      <EnumVal ord="70">A²t</EnumVal>
+      <EnumVal ord="71">VAh</EnumVal>
+      <EnumVal ord="72">Wh</EnumVal>
+      <EnumVal ord="73">VArh</EnumVal>
+      <EnumVal ord="74">V/Hz</EnumVal>
+    </EnumType>
+    <EnumType id="ACONIS/multiplier_1">
+      <EnumVal ord="-24">y</EnumVal>
+      <EnumVal ord="-21">z</EnumVal>
+      <EnumVal ord="-18">a</EnumVal>
+      <EnumVal ord="-15">f</EnumVal>
+      <EnumVal ord="-12">p</EnumVal>
+      <EnumVal ord="-9">n</EnumVal>
+      <EnumVal ord="-6">μ</EnumVal>
+      <EnumVal ord="-3">m</EnumVal>
+      <EnumVal ord="-2">c</EnumVal>
+      <EnumVal ord="-1">d</EnumVal>
+      <EnumVal ord="0" />
+      <EnumVal ord="1">da</EnumVal>
+      <EnumVal ord="2">h</EnumVal>
+      <EnumVal ord="3">k</EnumVal>
+      <EnumVal ord="6">M</EnumVal>
+      <EnumVal ord="9">G</EnumVal>
+      <EnumVal ord="12">T</EnumVal>
+      <EnumVal ord="15">P</EnumVal>
+      <EnumVal ord="18">E</EnumVal>
+      <EnumVal ord="21">Z</EnumVal>
+      <EnumVal ord="24">Y</EnumVal>
+    </EnumType>   
+
+  </DataTypeTemplates>
+</VCL>

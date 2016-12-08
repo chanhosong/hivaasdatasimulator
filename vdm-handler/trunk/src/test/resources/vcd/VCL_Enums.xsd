@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vcl="http://www.hhi.co.kr/VCL" 
+           targetNamespace="http://www.hhi.co.kr/VCL"
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified"
+           version="0.3">
+           
+	<xs:annotation>
+		<xs:documentation xml:lang="en">VCL schema. Version 0.3</xs:documentation>
+	</xs:annotation>
+	
+	<xs:include schemaLocation="VCL_BaseSimpleTypes.xsd"/>
+	
+	<xs:simpleType name="tPredefinedAttributeNameEnum">
+		<xs:restriction base="xs:Name">		
+			<xs:enumeration value="SIUnit"/>		
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tExtensionAttributeNameEnum">
+		<xs:restriction base="vcl:tRestrName1stL"/>
+	</xs:simpleType>
+	<xs:simpleType name="tAttributeNameEnum">
+		<xs:union memberTypes="vcl:tPredefinedAttributeNameEnum vcl:tExtensionAttributeNameEnum"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="tPredefinedLNClassEnum">
+		<xs:restriction base="xs:Name">
+			<xs:enumeration value="MMXU"/>
+			<xs:enumeration value="MDIF"/>
+			<xs:enumeration value="MHAI"/>
+			<xs:enumeration value="MHAN"/>
+			<xs:enumeration value="MMTR"/>
+			<xs:enumeration value="MMXN"/>
+			<xs:enumeration value="MSQI"/>
+			<xs:enumeration value="MSTA"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tExtensionLNClassEnum">
+		<xs:restriction base="xs:Name">
+			<xs:minLength value="1"/>
+			<xs:pattern value="\p{Lu}+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tLNClassEnum">
+		<xs:union memberTypes="vcl:tPredefinedLNClassEnum vcl:tExtensionLNClassEnum"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tPredefinedBasicTypeEnum">
+		<xs:restriction base="xs:Name">
+			<xs:enumeration value="BOOLEAN"/>
+			<xs:enumeration value="INT8"/>
+			<xs:enumeration value="INT16"/>
+			<xs:enumeration value="INT24"/>
+			<xs:enumeration value="INT32"/>			
+			<xs:enumeration value="INT8U"/>
+			<xs:enumeration value="INT16U"/>
+			<xs:enumeration value="INT24U"/>
+			<xs:enumeration value="INT32U"/>
+			<xs:enumeration value="FLOAT32"/>			
+			<xs:enumeration value="Enum"/>
+			<xs:enumeration value="Dbpos"/>			
+			<xs:enumeration value="Quality"/>
+			<xs:enumeration value="Timestamp"/>
+			<xs:enumeration value="VisString32"/>
+			<xs:enumeration value="VisString64"/>
+			<xs:enumeration value="VisString129"/>
+			<xs:enumeration value="VisString255"/>
+			<xs:enumeration value="Octet64"/>			
+			<xs:enumeration value="Struct"/>			
+			<xs:enumeration value="ObjRef"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tExtensionBasicTypeEnum">
+		<xs:restriction base="xs:Name">
+			<xs:pattern value="\p{Lu}[\p{L},\d]*"/>
+		</xs:restriction>
+	</xs:simpleType>	
+	<xs:simpleType name="tBasicTypeEnum">
+			<xs:union memberTypes="vcl:tPredefinedBasicTypeEnum vcl:tExtensionBasicTypeEnum"/>
+	</xs:simpleType>
+	<xs:simpleType name="tPredefinedCDCEnum">
+		<xs:restriction base="xs:Name">
+			<xs:enumeration value="SPS"/>
+			<xs:enumeration value="DPS"/>
+			<xs:enumeration value="INS"/>
+			<xs:enumeration value="ACT"/>
+			<xs:enumeration value="ACD"/>
+			<xs:enumeration value="SEC"/>
+			<xs:enumeration value="BCR"/>
+			<xs:enumeration value="MV"/>
+			<xs:enumeration value="CMV"/>
+			<xs:enumeration value="SAV"/>
+			<xs:enumeration value="WYE"/>
+			<xs:enumeration value="DEL"/>
+			<xs:enumeration value="SEQ"/>
+			<xs:enumeration value="HMV"/>
+			<xs:enumeration value="HWYE"/>
+			<xs:enumeration value="HDEL"/>
+			<xs:enumeration value="SPC"/>
+			<xs:enumeration value="DPC"/>
+			<xs:enumeration value="INC"/>
+			<xs:enumeration value="BSC"/>
+			<xs:enumeration value="ISC"/>
+			<xs:enumeration value="APC"/>
+			<xs:enumeration value="SPG"/>
+			<xs:enumeration value="ING"/>
+			<xs:enumeration value="ASG"/>
+			<xs:enumeration value="CURVE"/>
+			<xs:enumeration value="DPL"/>
+			<xs:enumeration value="LPL"/>
+			<xs:enumeration value="CSD"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tExtensionCDCEnum">
+		<xs:restriction base="xs:Name">
+			<xs:minLength value="1"/>
+			<xs:pattern value="\p{Lu}+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tCDCEnum">
+		<xs:union memberTypes="vcl:tPredefinedCDCEnum vcl:tExtensionCDCEnum"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tPredefinedEquipmentGroupEnum">
+		<xs:restriction base="xs:Name">
+			<xs:enumeration value="Stability_watertight_and_weathertight_integrity"/>
+			<xs:enumeration value="Mechanical"/>
+			<xs:enumeration value="Electrical"/>
+			<xs:enumeration value="Information_Technology"/>
+			<xs:enumeration value="Safety"/>
+			<xs:enumeration value="Hull_and_structure"/>
+			<xs:enumeration value="Instrumentation"/>
+			<xs:enumeration value="Materials"/>
+			<xs:enumeration value="Navigation"/>
+			<xs:enumeration value="Process"/>
+			<xs:enumeration value="Piping"/>
+			<xs:enumeration value="Telecommunication"/>
+			<xs:enumeration value="Subsea"/>
+			<xs:enumeration value="Heating_ventilation_and_air_conditioning"/>
+			<xs:enumeration value="Pipeline_and_riser_technology"/>
+			<xs:enumeration value="Multidiscipline"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tExtensionEquipmentGroupEnum">
+		<xs:restriction base="xs:Name">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentGroupEnum">
+		<xs:union memberTypes="vcl:tPredefinedEquipmentGroupEnum vcl:tExtensionEquipmentGroupEnum"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tEquipmentGroupCEnum">
+		<xs:restriction base="xs:Name">			
+			<xs:enumeration value="Machinery_equipment"/>
+			<xs:enumeration value="Pressurised_equipment"/>
+			<xs:enumeration value="Lifting_appliances"/>
+			<xs:enumeration value="Closing_appliances"/>
+			<xs:enumeration value="Drilling_equipment"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentGroupEEnum">
+		<xs:restriction base="xs:Name">			
+			<xs:enumeration value="Switchgear"/>
+			<xs:enumeration value="Electric_rotating_machines"/>
+			<xs:enumeration value="Converting_devices"/>
+			<xs:enumeration value="Battery_equipment"/>
+			<xs:enumeration value="Cabling_equipment"/>
+			<xs:enumeration value="Lighting_equipment"/>
+			<xs:enumeration value="Electric_systems"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentGroupFEnum">
+		<xs:restriction base="xs:Name">			
+			<xs:enumeration value="Hardware"/>
+			<xs:enumeration value="Software"/>
+			<xs:enumeration value="Information_systems"/>
+			<xs:enumeration value="Information_technology_component_selections"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentGroupGEnum">
+		<xs:restriction base="xs:Name">			
+			<xs:enumeration value="Safety_on_board_documentation"/>
+			<xs:enumeration value="Life-saving_equipment"/>
+			<xs:enumeration value="Fire_safety_equipment"/>
+			<xs:enumeration value="Working_environment_equipment"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentGroupIEnum">
+		<xs:restriction base="xs:Name">			
+			<xs:enumeration value="Control_and_monitoring_equipment"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentGroupNEnum">
+		<xs:restriction base="xs:Name">			
+			<xs:enumeration value="Charts"/>
+			<xs:enumeration value="Positioning_equipment"/>
+			<xs:enumeration value="Heading_information_equipment"/>
+			<xs:enumeration value="Speed_measuring_equipment"/>
+			<xs:enumeration value="Depth_measuring_equipment"/>
+			<xs:enumeration value="Signalling_equipment"/>
+			<xs:enumeration value="Collision_avoidance_equipment"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentGroupPEnum">
+		<xs:restriction base="xs:Name">			
+			<xs:enumeration value="Piping_and_ducting_equipment"/>
+			<xs:enumeration value="Pumping_and_fanning_equipment"/>
+			<xs:enumeration value="Piping_systems"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentGroupTEnum">
+		<xs:restriction base="xs:Name">			
+			<xs:enumeration value="External_communication_systems"/>
+			<xs:enumeration value="Internal_communication_systems"/>
+			<xs:enumeration value="Radio_equipment"/>
+			<xs:enumeration value="Communication_equipment"/>
+			<xs:enumeration value="Peripheral_communication_devices"/>
+			<xs:enumeration value="Alarm_devices"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tPredefinedtEquipmentEnum">
+		<xs:union memberTypes="vcl:tEquipmentGroupCEnum vcl:tEquipmentGroupEEnum vcl:tEquipmentGroupFEnum vcl:tEquipmentGroupGEnum vcl:tEquipmentGroupIEnum vcl:tEquipmentGroupNEnum vcl:tEquipmentGroupPEnum vcl:tEquipmentGroupTEnum"/>
+	</xs:simpleType>
+	<xs:simpleType name="tExtensiontEquipmentEnum">
+		<xs:restriction base="xs:Name">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tEquipmentEnum">
+		<xs:union memberTypes="vcl:tPredefinedtEquipmentEnum vcl:tExtensiontEquipmentEnum"/>
+	</xs:simpleType>
+	<xs:simpleType name="tPredefinedComponentEnum">
+		<xs:restriction base="xs:Name">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tExtensionComponentEnum">
+		<xs:restriction base="xs:Name">
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tComponentEnum">
+		<xs:union memberTypes="vcl:tPredefinedComponentEnum vcl:tExtensionComponentEnum"/>
+	</xs:simpleType>
+</xs:schema>

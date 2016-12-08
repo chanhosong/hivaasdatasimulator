@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.hhi.vaas.platform.datasimulator.feature_0.8.0.qualifier.jar" id="com.hhi.vaas.platform.datasimulator.feature" version="0.8.0.qualifier">
+      <category name="com.hhi.vaas.platform.mappingtool"/>
+   </feature>
+   <category-def name="com.hhi.vaas.platform.mappingtool" label="HHI Data simulator"/>
+</site>

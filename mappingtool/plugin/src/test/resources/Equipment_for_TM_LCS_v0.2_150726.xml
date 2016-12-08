@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<equipmentData>
+    <header id="LCS" revision="2" version="0">
+        <history/>
+    </header>
+    <device desc="Loading Computer" name="TM_LCS" type="">
+        <protocol desc="" name="KV" type="">
+            <group desc="" name="STS" type="">
+                <record desc="system date" name="STS01.VAL" type="yyyymmdd"/>
+                <record desc="system time" name="STS02.VAL" type="hhmmss"/>
+                <record desc="IMO number" name="STS03.VAL" type="-"/>
+                <record desc="online status (O=online, F=offline)" name="STS04.VAL" type="-"/>
+            </group>
+            <group desc="" name="VSW" type="">
+                <record desc="Displacement" name="VSW01.VAL" type="t"/>
+                <record desc="Deadweight" name="VSW02.VAL" type="t"/>
+            </group>
+            <group desc="" name="TSW" type="">
+                <record desc="total weight of Cargo Holds/Tanks" name="TSW01.VAL" type="t"/>
+                <record desc="total weight of Water Ballast Tanks" name="TSW02.VAL" type="t"/>
+                <record desc="total weight of Fuel Oil Tanks" name="TSW03.VAL" type="t"/>
+                <record desc="total weight of Diesel Oil Tanks" name="TSW04.VAL" type="t"/>
+                <record desc="total weight of Gas oil tanks" name="TSW05.VAL" type="t"/>
+                <record desc="total weight of Lubricating Oil Tanks" name="TSW06.VAL" type="t"/>
+                <record desc="total weight of Fresh Water Tanks" name="TSW07.VAL" type="t"/>
+                <record desc="total weight of Misc. Tanks" name="TSW08.VAL" type="t"/>
+                <record desc="total weight of deadweight constant" name="TSW09.VAL" type="t"/>
+            </group>
+            <group desc="" name="VCD" type="">
+                <record desc="Equivalent draft at LCF" name="VCD01.VAL" type="m"/>
+                <record desc="Draft at fore perpendicular" name="VCD02.VAL" type="m"/>
+                <record desc="Draft at Midship" name="VCD03.VAL" type="m"/>
+                <record desc="Draft at After Perpendicular" name="VCD04.VAL" type="m"/>
+                <record desc="Trim (by Stern sign : Minus(-))" name="VCD05.VAL" type="m"/>
+                <record desc="Heeling Angle (Heel to Port sign : Minus(-))" name="VCD06.VAL" type="deg."/>
+                <record desc="Propeller immersion ratio" name="VCD07.VAL" type="%"/>
+            </group>
+            <group desc="" name="VSG" type="">
+                <record desc="LCG (Longitudinal Center of Gravity) from AP" name="VSG01.VAL" type="m"/>
+                <record desc="VCG (Vertical Center of Gravity) above base line" name="VSG02.VAL" type="m"/>
+                <record desc="TCG (Transverse Center of Gravity) from center line" name="VSG03.VAL" type="m"/>
+            </group>
+            <group desc="" name="STB" type="">
+                <record desc="KMt (Transverse Metacentre) above base line" name="STB01.VAL" type="m"/>
+                <record desc="GM (Metacentric Height)" name="STB02.VAL" type="m"/>
+                <record desc="GGo (Free Surface effects) of liquid in tanks" name="STB03.VAL" type="m"/>
+                <record desc="GoM (GM corrected for the free surface effects) of liquid in tanks" name="STB04.VAL" type="m"/>
+            </group>
+            <group desc="" name="GOZ" type="">
+                <record desc="GOZ value at 0.1, 5, 10, 20, 30, 40, 50, 60 degree" name="GOZ01.VAL" type="m"/>
+            </group>
+            <group desc="" name="STR" type="">
+                <record desc="Max. Shear Force % value of a bulk head to allowable value" name="STR01.VAL" type="%"/>
+                <record desc="Max. Bending Moment % value of a bulk head to allowable value" name="STR02.VAL" type="%"/>
+            </group>
+            <group desc="" name="ARM" type="">
+                <record desc="alarm for IS, LS, HF, DS, WS, GM, CM, GS, TM, PI, VI, MD, FD" name="ARM01.VAL" type="O/X/N"/>
+            </group>
+            <group desc="" name="TWC" type="">
+                <record desc="weight for each cargo compartment(holds/tanks)" name="TWC01.VAL" type="t"/>
+            </group>
+            <group desc="" name="TWB" type="">
+                <record desc="weight for each ballast water tanks" name="TWB01.VAL" type="t"/>
+            </group>
+            <group desc="" name="TWO" type="">
+                <record desc="weight for each Fuel oil tanks" name="TWO01.VAL" type="t"/>
+            </group>
+            <group desc="" name="TWD" type="">
+                <record desc="weight for each diesel oil tanks" name="TWD01.VAL" type="t"/>
+            </group>
+            <group desc="" name="TWG" type="">
+                <record desc="weight for each gas oil tanks" name="TWG01.VAL" type="t"/>
+            </group>
+            <group desc="" name="TWL" type="">
+                <record desc="weight for each lubricating oil tanks" name="TWL01.VAL" type="t"/>
+            </group>
+            <group desc="" name="TWF" type="">
+                <record desc="weight for each fresh water tanks" name="TWF01.VAL" type="t"/>
+            </group>
+            <group desc="" name="TWM" type="">
+                <record desc="weight for each miscellaneous tanks" name="TWM01.VAL" type="t"/>
+            </group>
+            <group desc="" name="TLC" type="">
+                <record desc="LCG for each cargo compartment(holds/tanks) from AP" name="TLC01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TLB" type="">
+                <record desc="LCG for each ballast water tanks from AP" name="TLB01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TLO" type="">
+                <record desc="LCG for each Fuel oil tanks from AP" name="TLO01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TLD" type="">
+                <record desc="LCG for each diesel oil tanks from AP" name="TLD01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TLG" type="">
+                <record desc="LCG for each gas oil tanks from AP" name="TLG01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TLL" type="">
+                <record desc="LCG for each lubricating oil tanks from AP" name="TLL01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TLF" type="">
+                <record desc="LCG for each fresh water tanks from AP" name="TLF01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TLM" type="">
+                <record desc="LCG for each miscellaneous tanks from AP" name="TLM01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TVC" type="">
+                <record desc="VCG for each cargo compartment(holds/tanks) from baseline" name="TVC01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TVB" type="">
+                <record desc="VCG for each ballast water tanks from baseline" name="TVB01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TVO" type="">
+                <record desc="VCG for each Fuel oil tanks from baseline" name="TVO01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TVD" type="">
+                <record desc="VCG for each diesel oil tanks from baseline" name="TVD01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TVG" type="">
+                <record desc="VCG for each gas oil tanks from baseline" name="TVG01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TVL" type="">
+                <record desc="VCG for each lubricating oil tanks from baseline" name="TVL01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TVF" type="">
+                <record desc="VCG for each fresh water tanks from baseline" name="TVF01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TVM" type="">
+                <record desc="VCG for each miscellaneous tanks from baseline" name="TVM01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TTC" type="">
+                <record desc="TCG for each cargo compartment(holds/tanks) from centerline" name="TTC01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TTB" type="">
+                <record desc="TCG for each ballast water tanks from centerline" name="TTB01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TTO" type="">
+                <record desc="TCG for each Fuel oil tanks from centerline" name="TTO01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TTD" type="">
+                <record desc="TCG for each diesel oil tanks from centerline" name="TTD01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TTG" type="">
+                <record desc="TCG for each gas oil tanks from centerline" name="TTG01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TTL" type="">
+                <record desc="TCG for each lubricating oil tanks from centerline" name="TTL01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TTF" type="">
+                <record desc="TCG for each fresh water tanks from centerline" name="TTF01.VAL" type="m"/>
+            </group>
+            <group desc="" name="TTM" type="">
+                <record desc="TCG for each miscellaneous tanks from centerline" name="TTM01.VAL" type="m"/>
+            </group>
+            <group desc="" name="ODF" type="">
+                <record desc="online draft at forward" name="ODF01.VAL" type="m"/>
+                <record desc="online draft at mid port" name="ODF02.VAL" type="m"/>
+                <record desc="online draft at mid stbd" name="ODF03.VAL" type="m"/>
+                <record desc="online draft at afterward" name="ODF04.VAL" type="m"/>
+            </group>
+        </protocol>
+    </device>
+</equipmentData>

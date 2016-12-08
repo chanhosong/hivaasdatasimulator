@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MapData>
+   <Header id="VDR_Mapping" version="0" revision="3" equipmentID="LoadingComputer">
+      <VDMversion>
+         <Vitem>0.3</Vitem>
+         <Vitem>0.1</Vitem>
+      </VDMversion>
+      <History>
+         <Hitem version="0" revision="2" when="2015/02/21" who="" what="" why="" />
+         <Hitem version="0" revision="1" when="2015/02/01" who="" what="" why="" />
+      </History>
+   </Header>
+
+   <Mappings>
+      <Mapping protocol="KV"   function="" from="STS01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LPHD1.NamePlate.SystemDate" />
+      <Mapping protocol="KV"   function="" from="STS02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LPHD1.NamePlate.SystemTime" />
+      <Mapping protocol="KV"   function="" from="STS03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LPHD1.NamePlate.IMONumber" />
+      <Mapping protocol="KV"   function="" from="STS04.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LPHD1.Online.stVal" />
+                                                    
+      <Mapping protocol="KV"   function="" from="VSW01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.Displacement.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VSW02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.Deadweight.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TSW01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.CargoCompartment.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TSW02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.WaterBallastTank.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TSW03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.FuelOilTank.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TSW04.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.DieselOilTank.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TSW05.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.GasOilTank.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TSW06.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.LubricatingOilTank.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TSW07.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.FreshWaterTank.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TSW08.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.CargoCompartment.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TSW09.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselWGHT1.DeadweightConstant.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="VCD01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/SCON1.DraftatLCF.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VCD02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/SCON1.DraftatFP.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VCD03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/SCON1.Draftatmidship.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VCD04.VAL" param1="" 		param2="" to="VDMPath:LDCOM/SCON1.DraftatAP.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VCD05.VAL" param1="" 		param2="" to="VDMPath:LDCOM/SCON1.Trim.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VCD06.VAL" param1="" 		param2="" to="VDMPath:LDCOM/SCON1.HeelAngle.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VCD07.VAL" param1="" 		param2="" to="VDMPath:LDCOM/SCON1.PropImmersion.VAL.f" />
+      
+      <Mapping protocol="KV"   function="" from="VSG01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VSG02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="VSG03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="STB01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.KMt.VAL.f" />
+      <Mapping protocol="KV"   function="" from="STB02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GM.VAL.f" />
+      <Mapping protocol="KV"   function="" from="STB03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GGo.VAL.f" />
+      <Mapping protocol="KV"   function="" from="STB04.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoM.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="GOZ01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoZat01.VAL.f" />
+      <Mapping protocol="KV"   function="" from="GOZ02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoZat5.VAL.f" />
+      <Mapping protocol="KV"   function="" from="GOZ03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoZat10.VAL.f" />
+      <Mapping protocol="KV"   function="" from="GOZ04.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoZat20.VAL.f" />
+      <Mapping protocol="KV"   function="" from="GOZ05.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoZat30.VAL.f" />
+      <Mapping protocol="KV"   function="" from="GOZ06.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoZat40.VAL.f" />
+      <Mapping protocol="KV"   function="" from="GOZ07.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoZat50.VAL.f" />
+      <Mapping protocol="KV"   function="" from="GOZ08.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.GoZat60.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="STR01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.MaxShearForce.VAL.f" />
+      <Mapping protocol="KV"   function="" from="STR02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/VesselSTBL1.MaxBendingMoment.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="ARM01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.IntactStability.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.LongitudinalStrength.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.HoldingFloodingStrength.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM04.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.DamageStability.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM05.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.WeatherStability.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM06.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.MinimumGoM.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM07.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.CargoMass.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM08.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.GrainStability.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM09.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.TorsionalMoment.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM10.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.PropellerImmersion.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM11.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.Visibility.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM12.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.MaximumDraft.stVal" />
+      <Mapping protocol="KV"   function="" from="ARM13.VAL" param1="" 		param2="" to="VDMPath:LDCOM/AlarmSALM1.MinimumForwardDraft.stVal" />
+      
+      <Mapping protocol="KV"   function="" from="TWC01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL1.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLC01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVC01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTC01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL1.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWC02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL2.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLC02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL2.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVC02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL2.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTC02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL2.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWC03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL3.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLC03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL3.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVC03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL3.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTC03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/CargoCompartTankSTBL3.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWB01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL1.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLB01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVB01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTB01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL1.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWB02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL2.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLB02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL2.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVB02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL2.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTB02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL2.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWB03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL3.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLB03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL3.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVB03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL3.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTB03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/WaterBallastTankSTBL3.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWO01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL1.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLO01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVO01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTO01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL1.TransverseCOG.VAL.f" />
+      
+      <Mapping protocol="KV"   function="" from="TWO02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL2.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLO02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL2.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVO02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL2.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTO02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL2.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWO03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL3.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLO03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL3.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVO03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL3.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTO03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FuelOilTankSTBL3.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWD01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL1.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLD01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVD01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTD01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL1.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWD02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL2.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLD02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL2.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVD02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL2.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTD02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL2.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWD03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL3.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLD03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL3.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVD03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL3.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTD03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/DieselOilTankSTBL3.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWG01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL1.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLG01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVG01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTG01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL1.TransverseCOG.VAL.f" />
+      
+      <Mapping protocol="KV"   function="" from="TWG02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL2.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLG02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL2.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVG02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL2.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTG02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL2.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWG03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL3.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLG03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL3.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVG03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL3.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTG03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/GasOilTankSTBL3.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWL01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL1.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLL01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVL01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTL01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL1.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWL02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL2.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLL02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL2.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVL02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL2.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTL02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL2.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWL03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL3.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLL03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL3.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVL03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL3.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTL03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/LubOilTankSTBL3.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWF01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL1.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLF01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVF01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTF01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL1.TransverseCOG.VAL.f" />
+      
+      <Mapping protocol="KV"   function="" from="TWF02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL2.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLF02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL2.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVF02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL2.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTF02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL2.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWF03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL3.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLF03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL3.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVF03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL3.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTF03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/FreshWaterTankSTBL3.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWM01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL1.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLM01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL1.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVM01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL1.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTM01.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL1.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWM02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL2.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLM02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL2.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVM02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL2.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTM02.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL2.TransverseCOG.VAL.f" />
+                                                    
+      <Mapping protocol="KV"   function="" from="TWM03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL3.Weight.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TLM03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL3.LongitudinalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TVM03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL3.VerticalCOG.VAL.f" />
+      <Mapping protocol="KV"   function="" from="TTM03.VAL" param1="" 		param2="" to="VDMPath:LDCOM/MiscTankSTBL3.TransverseCOG.VAL.f" />
+      
+   </Mappings>
+</MapData>

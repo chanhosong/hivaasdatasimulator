@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.hhi.vaas.platform.mappingtool.feature_0.7.0.201508051746.jar" id="com.hhi.vaas.platform.mappingtool.feature" version="0.7.0.201508051746">
+      <category name="com.hhi.vaas.platform.mappingtool"/>
+   </feature>
+   <category-def name="com.hhi.vaas.platform.mappingtool" label="HHI Mapping Tool"/>
+</site>

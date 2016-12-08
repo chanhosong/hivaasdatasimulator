@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+extraProperties=
+projectKey=com.hhi.vaas.platform\:vdm-handler
+serverUrl=http\://sonarqube-hhivaas.ddns.net
+version=2

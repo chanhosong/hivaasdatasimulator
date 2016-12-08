@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M\(%line\) - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<logger name="com.hhi.vaas" level="TRACE"/>
+
+
+	<root level="DEBUG">
+	    <appender-ref ref="CONSOLE" />
+	</root>
+</configuration>

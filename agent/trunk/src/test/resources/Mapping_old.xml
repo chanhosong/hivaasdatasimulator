@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MapData>
+   <Header id="VDR_Mapping" version="0" revision="3">
+      <VDMversion>
+         <Vitem>0.3</Vitem>
+         <Vitem>0.1</Vitem>
+      </VDMversion>
+      <History>
+         <Hitem version="0" revision="2" when="2015/02/21" who="" what="" why="" />
+         <Hitem version="0" revision="1" when="2015/02/01" who="" what="" why="" />
+      </History>
+   </Header>
+
+   <Mappings>
+   
+      <Mapping protocol="KV"   function="" from="KEY1" param1="" 		param2="" to="VDMPath:RADR/GenRADR0.Msg.data" />
+      <Mapping protocol="KV"   function="" from="KEY2" param1="" 		param2="" to="VDMPath:RADR/GenRADR0.Msg.data" />
+      <Mapping protocol="KV"   function="" from="KEY3" param1="" 		param2="" to="VDMPath:RADR/GenRADR0.Msg.data" />
+      
+   </Mappings>
+</MapData>

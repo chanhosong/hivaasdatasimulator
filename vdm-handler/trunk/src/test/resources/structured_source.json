@@ -1,0 +1,18 @@
+[  
+   {  
+      "valid":"NA",
+      "receivedTime":1434556312313,
+      "vdmpath":"Navigation/Positioning/GlobalPositioningSystem/GPS/GPS1.Time.utc",
+      "systemName":"VDR",
+      "value":"092853.97",
+      "key":"GGA_field:01"
+   },
+   {  
+      "valid":"NA",
+      "receivedTime":1434556312313,
+      "vdmpath":"Navigation/Positioning/GlobalPositioningSystem/GPS/GPS1.Quality.setVal",
+      "systemName":"VDR",
+      "value":"Differential GPS, SPS mode",
+      "key":"GGA_field:06"
+   }
+]

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vcl="http://www.hhi.co.kr/VCL" 
+           targetNamespace="http://www.hhi.co.kr/VCL"
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified"
+           version="0.3">
+           
+	<xs:annotation>
+		<xs:documentation xml:lang="en">VCL schema. Version 0.3</xs:documentation>
+	</xs:annotation>
+	
+	<xs:include schemaLocation="VCL_BaseTypes.xsd"/>
+
+	<xs:complexType name="tAbstractDataAttribute" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:sequence>
+					<xs:element name="Val" type="vcl:tVal" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="name" type="vcl:tAttributeNameEnum" use="required"/>				
+				<xs:attribute name="bType" type="vcl:tBasicTypeEnum" use="required"/>				
+				<xs:attribute name="type" type="vcl:tAnyName" use="optional"/>
+				<xs:attribute name="count" type="xs:unsignedInt" use="optional" default="0"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tLNodeType">
+		<xs:complexContent>
+			<xs:extension base="vcl:tIDNaming">
+				<xs:sequence>
+					<xs:element name="DO" type="vcl:tDO" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:attribute name="lnClass" type="vcl:tLNClassEnum" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tDO">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:attribute name="name" type="vcl:tDataName" use="required"/>
+				<xs:attribute name="type" type="vcl:tName" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tDOType">
+		<xs:complexContent>
+			<xs:extension base="vcl:tIDNaming">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="SDO" type="vcl:tSDO"/>
+					<xs:element name="DA" type="vcl:tDA"/>
+				</xs:choice>				
+				<xs:attribute name="cdc" type="vcl:tCDCEnum" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tSDO">
+		<xs:complexContent>
+			<xs:extension base="vcl:tUnNaming">
+				<xs:attribute name="name" type="vcl:tRestrName1stL" use="required"/>
+				<xs:attribute name="type" type="vcl:tName" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tDA">
+		<xs:complexContent>
+			<xs:extension base="vcl:tAbstractDataAttribute">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tDAType">
+		<xs:complexContent>
+			<xs:extension base="vcl:tIDNaming">
+				<xs:sequence>
+					<xs:element name="BDA" type="vcl:tBDA" maxOccurs="unbounded"/>
+				</xs:sequence>				
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tBDA">
+		<xs:complexContent>
+			<xs:extension base="vcl:tAbstractDataAttribute"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tEnumType">
+		<xs:complexContent>
+			<xs:extension base="vcl:tIDNaming">
+				<xs:sequence>
+					<xs:element name="EnumVal" type="vcl:tEnumVal" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="tEnumVal">
+		<xs:simpleContent>
+			<xs:extension base="xs:normalizedString">
+				<xs:attribute name="ord" type="xs:integer" use="required"/>
+				<xs:attributeGroup ref="vcl:agDesc"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="tDataTypeTemplates">
+		<xs:sequence>
+			<xs:element name="LNodeType" type="vcl:tLNodeType" maxOccurs="unbounded">
+				<xs:unique name="uniqueDOInLNodeType">
+					<xs:selector xpath="vcl:DO"/>
+					<xs:field xpath="@name"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="DOType" type="vcl:tDOType" maxOccurs="unbounded">
+				<xs:unique name="uniqueDAorSDOInDOType">
+					<xs:selector xpath="./*"/>
+					<xs:field xpath="@name"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="DAType" type="vcl:tDAType" minOccurs="0" maxOccurs="unbounded">
+				<xs:unique name="uniqueBDAInDAType">
+					<xs:selector xpath="vcl:BDA"/>
+					<xs:field xpath="@name"/>
+				</xs:unique>
+			</xs:element>
+			<xs:element name="EnumType" type="vcl:tEnumType" minOccurs="0" maxOccurs="unbounded">
+				<xs:unique name="uniqueOrdInEnumType">
+					<xs:selector xpath="vcl:EnumVal"/>
+					<xs:field xpath="@ord"/>
+				</xs:unique>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DataTypeTemplates" type="vcl:tDataTypeTemplates">
+		<xs:unique name="uniqueLNodeType">
+			<xs:selector xpath="vcl:LNodeType"/>
+			<xs:field xpath="@id"/>
+			<!--<xs:field xpath="@iedType"/>-->
+		</xs:unique>
+		<xs:key name="DOTypeKey">
+			<xs:selector xpath="vcl:DOType"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:keyref name="ref2DOType" refer="vcl:DOTypeKey">
+			<xs:selector xpath="vcl:LNodeType/vcl:DO"/>
+			<xs:field xpath="@type"/>
+		</xs:keyref>
+		<xs:keyref name="ref2DOTypeForSDO" refer="vcl:DOTypeKey">
+			<xs:selector xpath="vcl:DOType/vcl:SDO"/>
+			<xs:field xpath="@type"/>
+		</xs:keyref>
+		<xs:key name="DATypeKey">
+			<xs:selector xpath="vcl:DAType"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:key name="EnumTypeKey">
+			<xs:selector xpath="vcl:EnumType"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+	</xs:element>
+</xs:schema>

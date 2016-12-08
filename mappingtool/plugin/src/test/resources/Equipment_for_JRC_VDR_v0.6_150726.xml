@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipmentData>
+   <header id="VDR" revision="6" version="0">
+      <history>
+         <item revision="5" version="0" what="fill the contents for VDR NMEA" when="2015/04/15" who="hsbae" why="to support JRC VDR" />
+         <item revision="4" version="0" what="add bypass data foramt" when="2015/04/09" who="hsbae" why="to support AIS data" />
+         <item revision="3" version="0" what="change record field" when="2015/04/09" who="hsbae" why="to increase readability" />
+         <item revision="2" version="0" what="" when="2015/02/21" who="" why="" />
+         <item revision="1" version="0" what="" when="2015/02/01" who="" why="" />
+      </history>
+   </header>
+   <device desc="Voyage Data Recorder" name="JRC_VDR" type="">
+      <protocol desc="" name="NMEA" type="">
+         <group desc="Global Positioning System Fix Data  " name="GGA" type="">
+            <record desc="UTC of position " name="field:01" type="" />
+            <record desc="Latitude" name="field:02" type="" />
+            <record desc="N/S " name="field:03" type="" />
+            <record desc="Longitude" name="field:04" type="" />
+            <record desc="E/W " name="field:05" type="" />
+            <record desc="GPS Quality indicator" name="field:06" type="" />
+            <record desc="Number of satellites in use, 00-12,  may be different from the number in view " name="field:07" type="" />
+         </group>
+         <group desc="Geographic Position – Latitude/Longitude  " name="GLL" type="">
+            <record desc="Latitude" name="field:01" type="" />
+            <record desc="N/S" name="field:02" type="" />
+            <record desc="Longitude" name="field:03" type="" />
+            <record desc="E/W   " name="field:04" type="" />
+            <record desc="UTC of position" name="field:05" type="" />
+            <record desc="Status&#xA;A = Data valid&#xA;V = Data not valid " name="field:06" type="" />
+            <record desc="Mode Indicator" name="field:07" type="" />
+         </group>
+         <group desc="Time &amp; Date " name="ZDA" type="">
+            <record desc="UTC " name="field:01" type="" />
+            <record desc="Day, 01 to 31 " name="field:02" type="" />
+            <record desc="Month, 01 to 12 " name="field:03" type="" />
+            <record desc="Year " name="field:04" type="" />
+            <record desc="Local zone hours, 00 to ±13 hrs" name="field:05" type="" />
+            <record desc="Local zone minutes, 00 to +59 " name="field:06" type="" />
+         </group>
+         <group desc="Course Over Ground &amp; Ground Speed  " name="VTG" type="">
+            <record desc="Course over ground" name="field:01" type="" />
+            <record desc="Degrees True" name="field:02" type="" />
+            <record desc="Course over ground" name="field:03" type="" />
+            <record desc="degrees Magnetic" name="field:04" type="" />
+            <record desc="Speed over ground" name="field:05" type="" />
+            <record desc="knots" name="field:06" type="" />
+            <record desc="Speed over ground" name="field:07" type="" />
+            <record desc="km/hr " name="field:08" type="" />
+            <record desc="Mode Indicator" name="field:09" type="" />
+         </group>
+         <group desc="Datum Reference  " name="DTM" type="">
+            <record desc="Local datum code&#xA;- WGS84 = W84&#xA;- WGS72 = W72 &#xA;- SGS85 = S85 &#xA;- PE90 = P90 &#xA;- User defined = 999 &#xA;- IHO datum code " name="field:01" type="" />
+            <record desc="Local datum subdivision code " name="field:02" type="" />
+            <record desc="Lat offset, minutes, " name="field:03" type="" />
+            <record desc="N/S" name="field:04" type="" />
+            <record desc="Lon offset, minutes" name="field:05" type="" />
+            <record desc="E/W" name="field:06" type="" />
+            <record desc="Altitude offset, meters" name="field:07" type="" />
+            <record desc="Reference datum code " name="field:08" type="" />
+         </group>
+         <group desc="Heading, True  " name="HDT" type="">
+            <record desc="Heading" name="field:01" type="" />
+            <record desc="degrees True" name="field:02" type="" />
+         </group>
+         <group desc="Rate Of Turn  " name="ROT" type="">
+            <record desc="Rate of turn, degrees/minute, &quot;-&quot; = bow turns to port" name="field:01" type="" />
+            <record desc="Status          A = Data valid , V = Data invalid" name="field:02" type="" />
+         </group>
+         <group desc="Dual Ground/Water Speed " name="VBW" type="">
+            <record desc="Longitudinal water speed1, knots" name="field:01" type="" />
+            <record desc="Transverse water speed1, knots" name="field:02" type="" />
+            <record desc="Status: Water speed, A = Data valid" name="field:03" type="" />
+            <record desc="Longitudinal ground speed , knots " name="field:04" type="" />
+            <record desc="Transverse ground speed1 , knots" name="field:05" type="" />
+            <record desc="Status, Ground speed, A = Data valid" name="field:06" type="" />
+            <record desc=" Stern transverse water speed1, knots" name="field:07" type="" />
+            <record desc="Status, stern water speed, A = Data valid " name="field:08" type="" />
+            <record desc="Stern transverse ground speed1, knots" name="field:09" type="" />
+            <record desc="Status, stern ground speed            A = Data valid, V = Invalid " name="field:10" type="" />
+         </group>
+         <group desc="Depth Below Transducer  " name="DBT" type="">
+            <record desc="Water depth, feet" name="field:01" type="" />
+            <record desc="f" name="field:02" type="" />
+            <record desc="Water depth, Meters" name="field:03" type="" />
+            <record desc="M" name="field:04" type="" />
+            <record desc="Water depth, Fathoms " name="field:05" type="" />
+            <record desc="F" name="field:06" type="" />
+         </group>
+         <group desc="Depth" name="DPT" type="">
+            <record desc="Water depth relative to the transducer, meters" name="field:01" type="" />
+            <record desc="Offset from transducer, meters " name="field:02" type="" />
+            <record desc="Maximum range scale in use" name="field:03" type="" />
+         </group>
+         <group desc="Wind Direction &amp; Speed" name="MWD" type="">
+            <record desc="Wind direction, 0 to 359 degrees True" name="field:01" type="" />
+            <record desc="Wind direction, 0 to 359 degrees Magnetic " name="field:02" type="" />
+            <record desc=" Wind speed, knots " name="field:03" type="" />
+            <record desc="Wind speed, meters/second " name="field:04" type="" />
+         </group>
+         <group desc="Wind Speed &amp; Angle" name="MWV" type="">
+            <record desc="Wind angle, 0 to 359 degrees " name="field:01" type="" />
+            <record desc="Reference, R = Relative , T = Theoretical " name="field:02" type="" />
+            <record desc="Wind speed" name="field:03" type="" />
+            <record desc="Wind speed units, K/M/N/S " name="field:04" type="" />
+            <record desc="Status, A = Data Valid, V = Data invalid " name="field:05" type="" />
+         </group>
+         <group desc="Rudder Sensor Angle  " name="RSA" type="">
+            <record desc="Starboard (or single) rudder sensor" name="field:01" type="" />
+            <record desc="Status A/V" name="field:02" type="" />
+            <record desc="Port rudder sensor" name="field:03" type="" />
+            <record desc="Status A/V" name="field:04" type="" />
+         </group>
+         <group desc="Revolutions  " name="RPM" type="">
+            <record desc="Source, shaft/engine S/E  " name="field:01" type="" />
+            <record desc="Engine or shaft number, numbered from centerline" name="field:02" type="" />
+            <record desc="Speed, rev/min, &quot;-&quot; = counter-clockwise" name="field:03" type="" />
+            <record desc="Propeller pitch, % of max., &quot;-&quot; = astern " name="field:04" type="" />
+            <record desc="Status (A/V)" name="field:05" type="" />
+         </group>
+         <group desc="AIS VHF Data-link Message " name="VDM" type="">
+            <record desc="Total number of sentences needed to transfer the message" name="field:01" type="x" />
+            <record desc="Sentence number" name="field:02" type="x" />
+            <record desc="Sequential message identifier" name="field:03" type="x" />
+            <record desc="AIS Channel" name="field:04" type="a" />
+            <record desc="Encapsulated ITU-R M.1371 radio messge" name="field:05" type="s--s" />
+            <record desc="Number of fill-bits" name="field:06" type="x" />
+         </group>
+         <group desc="AIS VHF Data-Link Own-Vessel Report" name="VDO" type="">
+            <record desc="Total number of sentences needed to transfer the message" name="field:01" type="x" />
+            <record desc="Sentence number" name="field:02" type="x" />
+            <record desc="Sequential message identifier" name="field:03" type="x" />
+            <record desc="AIS Channel" name="field:04" type="a" />
+            <record desc="Encapsulated ITU-R M.1371 radio message" name="field:05" type="s--s" />
+            <record desc="Number of fill-bits" name="field:06" type="x" />
+         </group>
+         <group desc="Set alarm state" name="ALR" type="">
+            <record desc="Time of alarm condition change, UTC " name="field:01" type="hhmmss.ss" />
+            <record desc="Unique alarm number (identifier) at alarm source " name="field:02" type="xxx" />
+            <record desc="Alarm condition (A = threshold exceeded, V = not exceeded) " name="field:03" type="A" />
+            <record desc="Alarm’s acknowledge state, A = acknowledged V = unacknowledged " name="field:04" type="A" />
+            <record desc="Alarm’s description text " name="field:05" type="c--c" />
+         </group>
+         <group desc="Set Detail Alarm Condition" name="ALA" type="">
+            <record desc="Event time" name="field:01" type="hhmmss.ss" />
+            <record desc="System indicator of original alarm source" name="field:02" type="aa" />
+            <record desc="Sub system equipment indicator of original alarm source" name="field:03" type="aa" />
+            <record desc="Instance number of equipment/unit/item" name="field:04" type="xx" />
+            <record desc="Type of alarm" name="field:05" type="xxx" />
+            <record desc="Alarm condition" name="field:06" type="a" />
+            <record desc="Alarm's acknowledged state" name="field:07" type="a" />
+            <record desc="Alarm's description text" name="field:08" type="c--c" />
+         </group>
+         <group desc=" Transducer Measurements" name="XDR" type="">
+            <record desc="Transducer type, Transducer #1" name="field:01" type="" />
+            <record desc="Masurement data, Transducer #1 " name="field:02" type="" />
+            <record desc="Units of measure, Transducer #1" name="field:03" type="" />
+            <record desc="Transducer #1 ID " name="field:04" type="" />
+         </group>
+         <group desc="Door Status Detection" name="DOR" type="">
+            <record desc="Message Type" name="field:01" type="" />
+            <record desc="Event time " name="field:02" type="" />
+            <record desc="Type of door monitoring system " name="field:03" type="" />
+            <record desc="First division indicator " name="field:04" type="" />
+            <record desc="Second division indicator" name="field:05" type="" />
+            <record desc="Door number or door open count " name="field:06" type="" />
+         </group>
+         <group desc="General Event Message" name="EVE" type="">
+            <record desc="Event time " name="field:01" type="" />
+            <record desc="Tag code used for identification of source of event " name="field:02" type="" />
+            <record desc="Event description" name="field:03" type="" />
+         </group>
+         <group desc="Text Transmission " name="TXT" type="">
+            <record desc="Total number of sentences 01 to 99 " name="field:01" type="" />
+            <record desc="Sentence number, 01 to 99" name="field:02" type="" />
+            <record desc="Text identifier" name="field:03" type="" />
+            <record desc="Text message" name="field:04" type="" />
+         </group>
+         <group desc="Tracked Target Message  " name="TTM" type="">
+            <record desc="Target number, 00 to 99 " name="field:01" type="" />
+            <record desc="Target distance, from own ship" name="field:02" type="" />
+            <record desc="Bearing from own ship, " name="field:03" type="" />
+            <record desc="degrees true/relative, T/R " name="field:04" type="" />
+            <record desc="Target speed " name="field:05" type="" />
+            <record desc="Target course" name="field:06" type="" />
+            <record desc="degrees true/relative, T/R " name="field:07" type="" />
+            <record desc="Distance of closest-point-of-approach " name="field:08" type="" />
+            <record desc="Time to CPA, minutes, &quot;-&quot; = increasing " name="field:09" type="" />
+            <record desc="Speed/distance units, K/N/S " name="field:10" type="" />
+            <record desc="Target name " name="field:11" type="" />
+            <record desc="Target status" name="field:12" type="" />
+            <record desc="Reference target" name="field:13" type="" />
+            <record desc="UTC of data" name="field:14" type="" />
+            <record desc="Type of acquisition (A,M,R)" name="field:15" type="" />
+         </group>
+         <group desc="Heading/Track Control Data " name="HTD" type="">
+            <record desc="Override, A = in use, V = not in use   " name="field:01" type="" />
+            <record desc="Commanded rudder angle, degrees " name="field:02" type="" />
+            <record desc="Commanded rudder direction, L/R=port/stbd " name="field:03" type="" />
+            <record desc="Selected steering mode" name="field:04" type="" />
+            <record desc="Turn mode&#xA;R = radius controlled&#xA;T = turn rate controlled &#xA;N = turn is not controlled " name="field:05" type="" />
+            <record desc="Commanded rudder limit, degrees (unsigned) " name="field:06" type="" />
+            <record desc="Commanded off-heading limit, degrees (unsigned) " name="field:07" type="" />
+            <record desc="Commanded radius of turn for heading changes, n. miles " name="field:08" type="" />
+            <record desc="Commanded rate of turn for heading changes, deg./minute " name="field:09" type="" />
+            <record desc="Commanded heading-to-steer , degrees " name="field:10" type="" />
+            <record desc="Commanded off-track limit , n. miles (unsigned) " name="field:11" type="" />
+            <record desc="Commanded track, degrees " name="field:12" type="" />
+            <record desc="Heading Reference in use, T/M " name="field:13" type="" />
+            <record desc="Rudder status  " name="field:14" type="" />
+            <record desc="Off-heading status" name="field:15" type="" />
+            <record desc="Off-track status" name="field:16" type="" />
+            <record desc="Vessel heading, degrees" name="field:17" type="" />
+         </group>
+         <group desc="Heading/Track Control Command " name="HTC" type="">
+            <record desc="Override, A = in use, V = not in use" name="field:01" type="" />
+            <record desc="Commanded rudder angle, degrees " name="field:02" type="" />
+            <record desc="Commanded rudder direction, L/R=port/stbd " name="field:03" type="" />
+            <record desc="Selected steering mode" name="field:04" type="" />
+            <record desc="Turn mode&#xA;R = radius controlled&#xA;T = turn rate controlled &#xA;N = turn is not controlled " name="field:05" type="" />
+            <record desc="Commanded rudder limit, degrees (unsigned) " name="field:06" type="" />
+            <record desc="Commanded off-heading limit, degrees (unsigned) " name="field:07" type="" />
+            <record desc="Commanded radius of turn for heading changes, n. miles " name="field:08" type="" />
+            <record desc="Commanded rate of turn for heading changes, deg./minute " name="field:09" type="" />
+            <record desc="Commanded heading-to-steer , degrees " name="field:10" type="" />
+            <record desc="Commanded off-track limit , n. miles (unsigned) " name="field:11" type="" />
+            <record desc="Commanded track, degrees " name="field:12" type="" />
+            <record desc="Heading Reference in use, T/M " name="field:13" type="" />
+            <record desc="Rudder status  " name="field:14" type="" />
+         </group>
+         <group desc="Engine Telegraph Operation Status " name="ETL" type="">
+            <record desc="Event time " name="field:01" type="" />
+            <record desc="Message type " name="field:02" type="" />
+            <record desc="Position indicator of engine telegraph " name="field:03" type="" />
+            <record desc="Position indication of sub telegraph " name="field:04" type="" />
+            <record desc="Operating location indicator " name="field:05" type="" />
+            <record desc="Number of engine or propeller shaft" name="field:06" type="" />
+         </group>
+      </protocol>
+   </device>
+</equipmentData>

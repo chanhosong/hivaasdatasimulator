@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vcl="http://www.hhi.co.kr/VCL" 
+           targetNamespace="http://www.hhi.co.kr/VCL"
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified"
+           version="0.3">
+           
+	<xs:annotation>
+		<xs:documentation xml:lang="en">VCL schema. Version 0.3</xs:documentation>
+	</xs:annotation>
+
+  	<xs:include schemaLocation="VCL_Vessel.xsd"/>
+  	<xs:include schemaLocation="VCL_System.xsd"/>
+  	<xs:include schemaLocation="VCL_DataTypeTemplate.xsd"/>
+
+  	<xs:element name="VCL">
+    		<xs:complexType>
+      			<xs:complexContent>
+        			<xs:extension base="vcl:tBaseElement">
+          				<xs:sequence>
+            					<xs:element name="Header" type="vcl:tHeader">
+              						<xs:unique name="uniqueHitem">
+                						<xs:selector xpath="./vcl:History/vcl:Hitem"/>
+                						<xs:field xpath="@version"/>
+                						<xs:field xpath="@revision"/>
+              						</xs:unique>
+            					</xs:element>
+            					<xs:element ref="vcl:Vessel" minOccurs="0" maxOccurs="unbounded"/>            
+            					<xs:element ref="vcl:System" minOccurs="0" maxOccurs="unbounded"/>
+            					<xs:element ref="vcl:DataTypeTemplates" minOccurs="0"/>
+          				</xs:sequence>
+          				<xs:attribute name="version" type="vcl:tVclVersion" use="optional" default="2015"/>
+          				<xs:attribute name="revision" type="vcl:tVclRevision" use="optional" default="A"/>
+        			</xs:extension>
+      			</xs:complexContent>
+    		</xs:complexType>
+  	</xs:element>
+</xs:schema>

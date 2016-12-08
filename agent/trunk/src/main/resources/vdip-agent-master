@@ -1,0 +1,68 @@
+#!/bin/sh
+#
+# chkconfig: - 85 15
+# description: HiVaas Agent daemon of Hyundai Heavy Industries Co., Ltd
+# processname: vdip-agent-master
+#
+
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+
+PROCESS_NAME=vdip-agent-master
+MAIN_CLASS=agent.master.MasterMain
+
+## agent installation directory
+#VDIP_AGENT_HOME="/home/osc/vdip-agent-0.6.0"
+
+if [ -z "$VDIP_AGENT_HOME" ]; then
+	echo "VDIP_AGENT_HOME is not set."
+    exit 5
+fi
+
+
+## run as a diffent user
+VDIP_AGENT_USER=osc
+ 
+##  Path to the pid, runnning info file
+lockfile=${LOCKFILE-/var/lock/subsys/${PROCESS_NAME}};
+ 
+RETVAL=0
+ 
+case "$1" in
+ start)
+        logger -s "Starting ${PROCESS_NAME}"
+        /bin/su -l ${VDIP_AGENT_USER} -c "cd $VDIP_AGENT_HOME; $VDIP_AGENT_HOME/master.sh notail"
+        RETVAL=$?
+        [ $RETVAL = 0 ] && touch ${lockfile}
+        ;;
+ stop)
+        PID=`ps -ef | grep java | grep "$MAIN_CLASS" | awk '{print $2}'`
+        ## if PID valid run kill.sh
+        if [[ -z ${PID} ]];then
+            logger -s "${PROCESS_NAME} is not running."
+            exit;
+        fi
+ 
+        logger -s "Stopping ${PROCESS_NAME}"
+        /bin/su -l ${VDIP_AGENT_USER} -c "$VDIP_AGENT_HOME/kill_master.sh"
+        RETVAL=$?
+        [ $RETVAL = 0 ] && rm -f ${lockfile}
+        ;;
+ status)
+        echo "HiVaas Agent Master Process: "
+        ps -ef | grep java | grep "$MAIN_CLASS"
+        RETVAL=$?
+        ;;
+ restart)
+         $0 stop
+         $0 start
+         ;;
+ *)
+         echo $"Usage: $0 {start|stop|restart|status}"
+        exit 1
+        ;;
+esac
+exit $RETVAL
+
