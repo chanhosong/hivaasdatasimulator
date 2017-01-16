@@ -13,20 +13,15 @@
  */
 package com.hhi.vaas.platform.agent.receiver;
 
-import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
-import java.net.SocketException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.agent.model.AgentStatus;
 import com.hhi.vaas.platform.agent.sender.RabbitMQSender;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import com.hhi.vaas.platform.vdm.parser.DataConverter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.net.*;
 
 
 

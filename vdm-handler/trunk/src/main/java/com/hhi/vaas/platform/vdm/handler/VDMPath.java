@@ -3,13 +3,11 @@
  */
 package com.hhi.vaas.platform.vdm.handler;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.w3c.dom.NamedNodeMap;
+import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
 import org.w3c.dom.Node;
 
-import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author BongJin Kwon

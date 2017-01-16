@@ -3,22 +3,19 @@
  */
 package com.hhi.vaas.platform.vdm.parser;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URI;
-import java.util.List;
-import java.util.Map;
+import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import com.hhi.vaas.platform.vdm.parser.exception.VDMMappingException;
+import com.hhi.vaas.platform.vdm.parser.xml.MappingXmlLoader;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
-import org.xml.sax.SAXException;
-
-import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
-import com.hhi.vaas.platform.vdm.parser.exception.VDMMappingException;
-import com.hhi.vaas.platform.vdm.parser.xml.MappingXmlLoader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 

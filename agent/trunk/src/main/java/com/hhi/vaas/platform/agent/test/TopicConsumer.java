@@ -12,13 +12,13 @@
  */
 package com.hhi.vaas.platform.agent.test;
 
-import java.util.Map;
-
 import com.hhi.vaas.platform.middleware.common.rabbitmq.VaasExchangeMessageClient;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.QueueingConsumer;
 import com.rabbitmq.client.QueueingConsumer.Delivery;
+
+import java.util.Map;
 
 /**
  * <pre>

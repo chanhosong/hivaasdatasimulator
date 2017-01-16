@@ -3,12 +3,11 @@
  */
 package com.hhi.vaas.platform.vdm.handler;
 
-import java.io.InputStream;
+import org.w3c.dom.Document;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
+import java.io.InputStream;
 
 /**
  * @author BongJin Kwon

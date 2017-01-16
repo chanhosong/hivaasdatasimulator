@@ -15,12 +15,11 @@
  */
 package com.hhi.vaas.platform.vdm.parser.nmea;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.sf.marineapi.nmea.sentence.Sentence;
 import net.sf.marineapi.nmea.sentence.SentenceId;
-import net.sf.marineapi.nmea.sentence.TalkerId;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author BongJin Kwon

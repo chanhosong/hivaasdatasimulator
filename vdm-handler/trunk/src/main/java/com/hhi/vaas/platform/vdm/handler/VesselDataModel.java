@@ -3,15 +3,14 @@
  */
 package com.hhi.vaas.platform.vdm.handler;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
+import com.hhi.vaas.platform.vdm.handler.struct.ItemData;
+import com.hhi.vaas.platform.vdm.handler.struct.StructureCreator;
+import com.hhi.vaas.platform.vdm.handler.struct.VDMPathDatas;
+import com.hhi.vaas.platform.vdm.handler.validation.DataValidator;
 import org.apache.commons.lang.StringUtils;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.SerializationConfig;
 import org.codehaus.jackson.node.ObjectNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,11 +18,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
-import com.hhi.vaas.platform.vdm.handler.struct.ItemData;
-import com.hhi.vaas.platform.vdm.handler.struct.StructureCreator;
-import com.hhi.vaas.platform.vdm.handler.struct.VDMPathDatas;
-import com.hhi.vaas.platform.vdm.handler.validation.DataValidator;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**

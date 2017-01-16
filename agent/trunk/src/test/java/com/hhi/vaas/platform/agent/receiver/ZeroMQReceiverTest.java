@@ -15,23 +15,7 @@
  */
 package com.hhi.vaas.platform.agent.receiver;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.io.InputStream;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.agent.model.AgentStatus;
-import com.hhi.vaas.platform.agent.sender.RabbitMQSender;
 import com.hhi.vaas.platform.agent.test.TestClient;
 import com.hhi.vaas.platform.agent.test.TestSender;
 import com.hhi.vaas.platform.agent.test.TestZeroMQSender;
@@ -39,6 +23,14 @@ import com.hhi.vaas.platform.agent.vcd.VCDHandler;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import com.hhi.vaas.platform.vdm.parser.DataConverter;
 import com.hhi.vaas.platform.vdm.parser.DataConverterFactory;
+import org.junit.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.InputStream;
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 /**
  * @author BongJin Kwon

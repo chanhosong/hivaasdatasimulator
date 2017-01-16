@@ -12,19 +12,6 @@
  */
 package com.hhi.vaas.platform.agent.health;
 
-import static org.junit.Assert.*;
-
-import java.io.InputStream;
-import java.net.InetSocketAddress;
-
-import org.apache.http.localserver.LocalServerTestBase;
-import org.apache.http.localserver.LocalTestServer;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.hhi.vaas.platform.agent.enlist.MockMQSender;
 import com.hhi.vaas.platform.agent.model.AgentStatus;
 import com.hhi.vaas.platform.agent.sender.RabbitMQSender;
@@ -33,6 +20,14 @@ import com.hhi.vaas.platform.agent.vcd.VCDHandler;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import com.hhi.vaas.platform.vdm.parser.DataConverter;
 import com.hhi.vaas.platform.vdm.parser.DataConverterFactory;
+import org.apache.http.localserver.LocalServerTestBase;
+import org.apache.http.localserver.LocalTestServer;
+import org.junit.*;
+
+import java.io.InputStream;
+import java.net.InetSocketAddress;
+
+import static org.junit.Assert.*;
 
 public class HealthNotifierTest extends LocalServerTestBase{
 	

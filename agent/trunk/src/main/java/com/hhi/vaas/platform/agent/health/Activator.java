@@ -15,13 +15,12 @@
  */
 package com.hhi.vaas.platform.agent.health;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.agent.model.AgentStatus;
 import com.hhi.vaas.platform.agent.model.Authentication;
 import com.hhi.vaas.platform.agent.sender.RabbitMQSender;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * agent activator

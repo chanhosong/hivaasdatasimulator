@@ -15,10 +15,14 @@
  */
 package com.hhi.vaas.platform.agent.enlist;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-
+import com.hhi.vaas.platform.agent.AgentMain;
+import com.hhi.vaas.platform.agent.health.Activator;
+import com.hhi.vaas.platform.agent.http.HttpHandler;
+import com.hhi.vaas.platform.agent.model.Authentication;
+import com.hhi.vaas.platform.agent.vcd.VCDHandler;
+import com.hhi.vaas.platform.middleware.common.util.JSONUtil;
+import com.hhi.vaas.platform.middleware.common.util.PropertyService;
+import com.hhi.vaas.platform.vdm.handler.crypto.CryptoException;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Content;
@@ -28,15 +32,8 @@ import org.codehaus.jackson.JsonNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hhi.vaas.platform.agent.AgentMain;
-import com.hhi.vaas.platform.agent.health.Activator;
-import com.hhi.vaas.platform.agent.http.HttpHandler;
-import com.hhi.vaas.platform.agent.model.AgentStatus;
-import com.hhi.vaas.platform.agent.model.Authentication;
-import com.hhi.vaas.platform.agent.vcd.VCDHandler;
-import com.hhi.vaas.platform.middleware.common.util.JSONUtil;
-import com.hhi.vaas.platform.middleware.common.util.PropertyService;
-import com.hhi.vaas.platform.vdm.handler.crypto.CryptoException;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * <pre>

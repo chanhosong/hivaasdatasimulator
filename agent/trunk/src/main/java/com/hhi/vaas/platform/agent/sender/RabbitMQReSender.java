@@ -15,12 +15,11 @@
  */
 package com.hhi.vaas.platform.agent.sender;
 
-import java.util.List;
-
+import com.hhi.vaas.platform.agent.model.BackupMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hhi.vaas.platform.agent.model.BackupMessage;
+import java.util.List;
 
 /**
  * reconnect mq & resend backup message

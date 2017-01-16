@@ -15,15 +15,15 @@
  */
 package com.hhi.vaas.platform.vdm.parser;
 
-import java.util.List;
-
+import com.hhi.vaas.platform.vdm.handler.VDMNode;
+import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import com.hhi.vaas.platform.vdm.handler.exception.VDMNodeNotFoundException;
+import com.hhi.vaas.platform.vdm.handler.validation.DataValidator;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hhi.vaas.platform.vdm.handler.VDMNode;
-import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
-import com.hhi.vaas.platform.vdm.handler.validation.DataValidator;
+import java.util.List;
 
 /**
  * @author BongJin Kwon
@@ -87,9 +87,14 @@ public abstract class AbstractVDMParser implements VDMParser {
 		
 		if (StringUtils.isNotEmpty(systemName) && StringUtils.isNotEmpty(vdmFullPath) && vdm != null ) {
 			String vdmpath = VesselDataModel.getVDMPath(vdmFullPath);
-			
-			VDMNode vdmNode = vdm.getVDMNode(systemName, vdmpath);
-			
+
+			VDMNode vdmNode = null;
+			try {
+				vdmNode = vdm.getVDMNode(systemName, vdmpath);
+			} catch (VDMNodeNotFoundException e) {
+				e.printStackTrace();
+			}
+
 			return vdm.convertType(vdmNode, value);
 		}
 		
@@ -110,9 +115,14 @@ public abstract class AbstractVDMParser implements VDMParser {
 		if(StringUtils.isNotEmpty(systemName) && StringUtils.isNotEmpty(vdmFullPath) && vdm != null ){
 			
 			String vdmpath = VesselDataModel.getVDMPath(vdmFullPath);
-			
-			VDMNode vdmNode = vdm.getVDMNode(systemName, vdmpath);
-			
+
+			VDMNode vdmNode = null;
+			try {
+				vdmNode = vdm.getVDMNode(systemName, vdmpath);
+			} catch (VDMNodeNotFoundException e) {
+				e.printStackTrace();
+			}
+
 			return vdm.validate(vdmNode, value);
 		}
 		

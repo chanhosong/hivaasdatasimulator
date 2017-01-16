@@ -3,16 +3,15 @@
  */
 package com.hhi.vaas.platform.vdm.parser.nmea;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.hhi.vaas.platform.vdm.parser.exception.ParserException;
 import net.sf.marineapi.nmea.parser.DataNotAvailableException;
 import net.sf.marineapi.nmea.sentence.Sentence;
 import net.sf.marineapi.nmea.sentence.SentenceId;
 import net.sf.marineapi.nmea.sentence.SentenceValidator;
 import net.sf.marineapi.nmea.sentence.TalkerId;
 
-import com.hhi.vaas.platform.vdm.parser.exception.ParserException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author BongJin Kwon

@@ -15,9 +15,9 @@
  */
 package com.hhi.vaas.platform.agent.model;
 
-import java.io.IOException;
-
 import com.hhi.vaas.platform.middleware.common.util.JSONUtil;
+
+import java.io.IOException;
 
 /**
  * @author BongJin Kwon

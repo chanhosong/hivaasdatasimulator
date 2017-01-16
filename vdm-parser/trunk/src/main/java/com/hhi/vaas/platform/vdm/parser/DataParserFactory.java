@@ -3,16 +3,14 @@
  */
 package com.hhi.vaas.platform.vdm.parser;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.vdm.parser.config.DefaultConfigAlarmParser;
 import com.hhi.vaas.platform.vdm.parser.kv.KVParser;
 import com.hhi.vaas.platform.vdm.parser.nmea.DefaultNMEAParserProxy;
-import com.hhi.vaas.platform.vdm.parser.nmea.NMEAAISParserProxy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author BongJin Kwon

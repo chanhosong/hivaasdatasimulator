@@ -13,7 +13,9 @@
 
 package com.hhi.vaas.platform.vdm.parser.filetest;
 
-import static org.junit.Assert.assertNotNull;
+import com.hhi.vaas.platform.vdm.parser.TestResources;
+import com.hhi.vaas.platform.vdm.parser.ais.AISDecoder;
+import com.hhi.vaas.platform.vdm.parser.nmea.NMEA0183Parser;
 
 import java.io.DataInputStream;
 import java.io.InputStream;
@@ -21,9 +23,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.hhi.vaas.platform.vdm.parser.TestResources;
-import com.hhi.vaas.platform.vdm.parser.ais.AISDecoder;
-import com.hhi.vaas.platform.vdm.parser.nmea.NMEA0183Parser;
+import static org.junit.Assert.assertNotNull;
 
 
 /*

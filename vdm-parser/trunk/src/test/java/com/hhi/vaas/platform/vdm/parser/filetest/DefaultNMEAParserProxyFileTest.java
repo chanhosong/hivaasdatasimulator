@@ -13,14 +13,14 @@
 
 package com.hhi.vaas.platform.vdm.parser.filetest;
 
-import static org.junit.Assert.assertNotNull;
+import com.hhi.vaas.platform.vdm.parser.nmea.NMEA0183Parser;
 
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 
-import com.hhi.vaas.platform.vdm.parser.nmea.NMEA0183Parser;
+import static org.junit.Assert.assertNotNull;
 
 
 /*

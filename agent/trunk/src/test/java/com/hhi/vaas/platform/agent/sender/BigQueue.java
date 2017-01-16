@@ -15,11 +15,11 @@
  */
 package com.hhi.vaas.platform.agent.sender;
 
-import java.io.IOException;
-
 import com.leansoft.bigqueue.BigArrayImpl;
 import com.leansoft.bigqueue.BigQueueImpl;
 import com.leansoft.bigqueue.IBigQueue;
+
+import java.io.IOException;
 
 /**
  * @author BongJin Kwon

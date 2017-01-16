@@ -12,24 +12,21 @@
  */
 package com.hhi.vaas.platform.vdm.parser.kv;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
+import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import com.hhi.vaas.platform.vdm.parser.AbstractVDMParser;
+import com.hhi.vaas.platform.vdm.parser.VDMMapping;
+import com.hhi.vaas.platform.vdm.parser.exception.ParserException;
+import com.hhi.vaas.platform.vdm.parser.model.DefaultModel;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
-import com.hhi.vaas.platform.vdm.parser.AbstractVDMParser;
-import com.hhi.vaas.platform.vdm.parser.VDMMapping;
-import com.hhi.vaas.platform.vdm.parser.VDMParser;
-import com.hhi.vaas.platform.vdm.parser.exception.ParserException;
-import com.hhi.vaas.platform.vdm.parser.exception.VDMMappingException;
-import com.hhi.vaas.platform.vdm.parser.model.DefaultModel;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 
 /**

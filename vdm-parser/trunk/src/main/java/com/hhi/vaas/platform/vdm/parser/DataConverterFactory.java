@@ -3,16 +3,14 @@
  */
 package com.hhi.vaas.platform.vdm.parser;
 
+import com.hhi.vaas.platform.vdm.handler.VDMLoader;
+import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
-
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.xml.sax.SAXException;
-
-import com.hhi.vaas.platform.vdm.handler.VDMLoader;
-import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
 
 
 /**

@@ -12,7 +12,14 @@
  */
 package com.hhi.vaas.platform.agent.receiver;
 
-import static org.junit.Assert.*;
+import com.hhi.vaas.platform.agent.model.AgentStatus;
+import com.hhi.vaas.platform.agent.vcd.VCDHandler;
+import com.hhi.vaas.platform.middleware.common.util.PropertyService;
+import com.hhi.vaas.platform.vdm.parser.DataConverter;
+import com.hhi.vaas.platform.vdm.parser.DataConverterFactory;
+import org.junit.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.net.DatagramPacket;
@@ -20,19 +27,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.hhi.vaas.platform.agent.model.AgentStatus;
-import com.hhi.vaas.platform.agent.vcd.VCDHandler;
-import com.hhi.vaas.platform.middleware.common.util.PropertyService;
-import com.hhi.vaas.platform.vdm.parser.DataConverter;
-import com.hhi.vaas.platform.vdm.parser.DataConverterFactory;
+import static org.junit.Assert.*;
 
 public class UDPReceiverTest {
 	

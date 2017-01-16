@@ -12,10 +12,14 @@
  */
 package com.hhi.vaas.platform.agent.health;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-
+import com.hhi.vaas.platform.agent.AgentMain;
+import com.hhi.vaas.platform.agent.http.HttpHandler;
+import com.hhi.vaas.platform.agent.model.Authentication;
+import com.hhi.vaas.platform.agent.receiver.AbstractDataReceiver;
+import com.hhi.vaas.platform.agent.update.UpdateHandler;
+import com.hhi.vaas.platform.agent.update.UpdateResultModel;
+import com.hhi.vaas.platform.middleware.common.util.JSONUtil;
+import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Content;
@@ -25,14 +29,9 @@ import org.codehaus.jackson.JsonNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hhi.vaas.platform.agent.AgentMain;
-import com.hhi.vaas.platform.agent.http.HttpHandler;
-import com.hhi.vaas.platform.agent.model.Authentication;
-import com.hhi.vaas.platform.agent.receiver.AbstractDataReceiver;
-import com.hhi.vaas.platform.agent.update.UpdateHandler;
-import com.hhi.vaas.platform.agent.update.UpdateResultModel;
-import com.hhi.vaas.platform.middleware.common.util.JSONUtil;
-import com.hhi.vaas.platform.middleware.common.util.PropertyService;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * @author BongJin Kwon

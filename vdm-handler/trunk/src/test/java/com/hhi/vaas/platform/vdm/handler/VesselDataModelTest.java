@@ -1,26 +1,11 @@
 package com.hhi.vaas.platform.vdm.handler;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
+import com.hhi.vaas.platform.middleware.common.util.JSONUtil;
+import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
+import com.hhi.vaas.platform.vdm.handler.validation.DataValidator;
 import org.apache.commons.io.FileUtils;
 import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -30,9 +15,14 @@ import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
-import com.hhi.vaas.platform.middleware.common.util.JSONUtil;
-import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
-import com.hhi.vaas.platform.vdm.handler.validation.DataValidator;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class VesselDataModelTest {
 	

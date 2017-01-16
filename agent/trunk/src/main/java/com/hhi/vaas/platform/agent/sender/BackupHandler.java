@@ -15,11 +15,11 @@
  */
 package com.hhi.vaas.platform.agent.sender;
 
+import com.hhi.vaas.platform.agent.model.BackupMessage;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
-
-import com.hhi.vaas.platform.agent.model.BackupMessage;
 
 /**
  * @author BongJin Kwon

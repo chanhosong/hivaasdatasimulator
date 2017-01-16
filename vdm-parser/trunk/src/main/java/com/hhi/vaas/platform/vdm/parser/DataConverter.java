@@ -3,14 +3,11 @@
  */
 package com.hhi.vaas.platform.vdm.parser;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import javax.xml.parsers.ParserConfigurationException;
-
+import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
 import org.xml.sax.SAXException;
 
-import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 /**
  * Data Converter interface

@@ -15,15 +15,14 @@
  */
 package com.hhi.vaas.platform.vdm.handler.validation;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.vdm.handler.VDMException;
 import com.hhi.vaas.platform.vdm.handler.VDMNode;
 import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * equipment raw data validator.

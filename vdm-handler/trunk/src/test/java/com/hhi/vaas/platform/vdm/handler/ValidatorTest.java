@@ -12,8 +12,9 @@
  */
 package com.hhi.vaas.platform.vdm.handler;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,9 +24,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 /**
  * <pre>

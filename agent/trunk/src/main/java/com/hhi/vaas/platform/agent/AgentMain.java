@@ -15,17 +15,6 @@
  */
 package com.hhi.vaas.platform.agent;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.util.UUID;
-
-import org.apache.commons.io.FileUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.agent.enlist.EnlistHandler;
 import com.hhi.vaas.platform.agent.health.Activator;
 import com.hhi.vaas.platform.agent.health.HealthNotifier;
@@ -37,10 +26,16 @@ import com.hhi.vaas.platform.agent.sender.RabbitMQSender;
 import com.hhi.vaas.platform.agent.update.UpdateHandler;
 import com.hhi.vaas.platform.agent.vcd.VCDHandler;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
-import com.hhi.vaas.platform.vdm.handler.crypto.CryptoException;
-import com.hhi.vaas.platform.vdm.handler.crypto.CryptoUtils;
 import com.hhi.vaas.platform.vdm.parser.DataConverter;
 import com.hhi.vaas.platform.vdm.parser.DataConverterFactory;
+import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.UUID;
 
 /**
  * <pre>

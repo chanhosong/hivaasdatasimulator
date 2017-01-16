@@ -12,19 +12,10 @@
  */
 package com.hhi.vaas.platform.vdm.parser;
 
-import static org.junit.Assert.*;
-
-import java.io.IOException;
-import java.util.List;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import com.hhi.vaas.platform.vdm.parser.ais.AISDecoder;
 import com.hhi.vaas.platform.vdm.parser.nmea.NMEA0183Parser;
+import org.junit.*;
+
+import static org.junit.Assert.fail;
 
 public class NMEA0183ParserTest {
 

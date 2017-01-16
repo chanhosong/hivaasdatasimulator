@@ -12,17 +12,15 @@
  */
 package com.hhi.vaas.platform.agent.sender;
 
-import java.io.IOException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.hhi.vaas.platform.agent.model.AgentStatus;
 import com.hhi.vaas.platform.middleware.common.rabbitmq.VaasExchangeMessageClient;
 import com.hhi.vaas.platform.middleware.common.rabbitmq.VaasMQException;
 import com.hhi.vaas.platform.middleware.common.rabbitmq.VaasMQMessage;
 import com.hhi.vaas.platform.middleware.common.rabbitmq.VaasMessageClient;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
 
 /**
  * <pre>

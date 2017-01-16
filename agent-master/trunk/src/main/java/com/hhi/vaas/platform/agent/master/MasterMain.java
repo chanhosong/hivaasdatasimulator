@@ -12,13 +12,12 @@
  */
 package com.hhi.vaas.platform.agent.master;
 
-import java.io.File;
-import java.io.IOException;
-
+import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hhi.vaas.platform.middleware.common.util.PropertyService;
+import java.io.File;
+import java.io.IOException;
 
 
 public class MasterMain {

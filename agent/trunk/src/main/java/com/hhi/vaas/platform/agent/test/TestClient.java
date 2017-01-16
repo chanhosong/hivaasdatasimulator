@@ -15,15 +15,14 @@
  */
 package com.hhi.vaas.platform.agent.test;
 
+import com.hhi.vaas.platform.middleware.common.util.PropertyService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 
 /**
  * Agent test client.

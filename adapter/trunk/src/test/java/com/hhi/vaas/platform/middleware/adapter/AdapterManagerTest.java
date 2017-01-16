@@ -12,25 +12,6 @@
  */
 package com.hhi.vaas.platform.middleware.adapter;
 
-import static org.junit.Assert.fail;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
-import java.net.UnknownHostException;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.hhi.vaas.platform.middleware.common.mongodb.VaasMongoManager;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import com.hhi.vaas.platform.middleware.metadata.KeyValueDomain;
@@ -40,6 +21,16 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
 import com.mongodb.util.JSON;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.*;
+import java.util.*;
+
+import static org.junit.Assert.fail;
 
 /**
  * <pre>

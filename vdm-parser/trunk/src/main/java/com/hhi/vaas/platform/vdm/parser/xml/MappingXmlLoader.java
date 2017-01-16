@@ -1,18 +1,17 @@
 package com.hhi.vaas.platform.vdm.parser.xml;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import com.hhi.vaas.platform.vdm.handler.VDMConstants;
+import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.hhi.vaas.platform.vdm.handler.VDMConstants;
-import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <pre>

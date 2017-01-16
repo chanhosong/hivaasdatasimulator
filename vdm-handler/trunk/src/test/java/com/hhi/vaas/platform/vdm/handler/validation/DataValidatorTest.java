@@ -12,21 +12,16 @@
  */
 package com.hhi.vaas.platform.vdm.handler.validation;
 
-import static org.junit.Assert.*;
-
-import java.util.Map;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.vdm.handler.VDMLoader;
 import com.hhi.vaas.platform.vdm.handler.VDMNode;
 import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import org.junit.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+
+import static org.junit.Assert.*;
 
 public class DataValidatorTest {
 	

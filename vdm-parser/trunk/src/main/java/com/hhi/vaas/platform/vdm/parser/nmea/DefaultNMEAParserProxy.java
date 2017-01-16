@@ -15,21 +15,17 @@
  */
 package com.hhi.vaas.platform.vdm.parser.nmea;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import net.sf.marineapi.nmea.sentence.SentenceValidator;
-
-import org.codehaus.jackson.map.ObjectMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
 import com.hhi.vaas.platform.vdm.parser.AbstractVDMParser;
 import com.hhi.vaas.platform.vdm.parser.VDMMapping;
-import com.hhi.vaas.platform.vdm.parser.VDMParser;
 import com.hhi.vaas.platform.vdm.parser.exception.VDMMappingException;
 import com.hhi.vaas.platform.vdm.parser.model.DefaultModel;
+import net.sf.marineapi.nmea.sentence.SentenceValidator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <pre>

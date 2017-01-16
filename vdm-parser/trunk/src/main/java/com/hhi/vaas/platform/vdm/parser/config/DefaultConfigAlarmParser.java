@@ -13,22 +13,17 @@
 
 package com.hhi.vaas.platform.vdm.parser.config;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.node.ArrayNode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.middleware.common.util.JSONUtil;
 import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
 import com.hhi.vaas.platform.vdm.parser.AbstractVDMParser;
 import com.hhi.vaas.platform.vdm.parser.VDMMapping;
 import com.hhi.vaas.platform.vdm.parser.exception.ParserException;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.node.ArrayNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.*;
 
 /**
  * alarm & config parser

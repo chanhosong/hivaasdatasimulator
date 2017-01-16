@@ -15,22 +15,6 @@
  */
 package com.hhi.vaas.platform.agent.update;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import org.apache.commons.io.FileSystemUtils;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-import org.apache.tools.ant.taskdefs.optional.ReplaceRegExp;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
 import com.hhi.vaas.platform.vdm.handler.VDMLoader;
@@ -38,7 +22,15 @@ import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
 import com.hhi.vaas.platform.vdm.handler.crypto.CryptoException;
 import com.hhi.vaas.platform.vdm.handler.crypto.CryptoUtils;
 import com.hhi.vaas.platform.vdm.parser.DataConverter;
-import com.hhi.vaas.platform.vdm.parser.VDMMapping;
+import org.apache.commons.io.FileUtils;
+import org.apache.tools.ant.taskdefs.optional.ReplaceRegExp;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * <pre>

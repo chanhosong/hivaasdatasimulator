@@ -1,19 +1,13 @@
 package com.hhi.vaas.platform.vdm.parser;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.hhi.vaas.platform.vdm.handler.VDMLoader;
 import com.hhi.vaas.platform.vdm.handler.VesselDataModel;
+import org.junit.*;
+
+import java.net.URISyntaxException;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class VDMMappingTest {
 	

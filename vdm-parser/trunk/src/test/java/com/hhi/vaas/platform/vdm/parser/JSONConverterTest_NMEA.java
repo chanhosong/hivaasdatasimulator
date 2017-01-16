@@ -1,22 +1,15 @@
 package com.hhi.vaas.platform.vdm.parser;
 
 
-import static org.junit.Assert.*;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.omg.PortableInterceptor.SUCCESSFUL;
-
 import com.hhi.vaas.platform.vdm.parser.filetest.DataParserFactoryFileTest;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
+import org.junit.*;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import static org.junit.Assert.*;
 
 public class JSONConverterTest_NMEA {
 	

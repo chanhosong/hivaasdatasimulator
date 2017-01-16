@@ -12,11 +12,10 @@
  */
 package com.hhi.vaas.platform.middleware.adapter;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import net.engio.mbassy.bus.error.IPublicationErrorHandler;
 import net.engio.mbassy.bus.error.PublicationError;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * <pre>

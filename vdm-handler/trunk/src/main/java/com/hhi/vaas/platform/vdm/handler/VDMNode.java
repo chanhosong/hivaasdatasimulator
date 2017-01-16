@@ -15,13 +15,12 @@
  */
 package com.hhi.vaas.platform.vdm.handler;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Node of vdmpath

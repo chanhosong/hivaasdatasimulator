@@ -12,23 +12,6 @@
  */
 package com.hhi.vaas.platform.middleware.adapter;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.net.MulticastSocket;
-import java.net.SocketException;
-import java.util.Date;
-
-import javax.xml.parsers.ParserConfigurationException;
-
-import net.engio.mbassy.listener.Handler;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.xml.sax.SAXException;
-
 import com.hhi.vaas.platform.middleware.common.rabbitmq.VaasExchangeMessageClient;
 import com.hhi.vaas.platform.middleware.common.rabbitmq.VaasMQMessage;
 import com.hhi.vaas.platform.middleware.common.rabbitmq.VaasMessageClient;
@@ -40,6 +23,16 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
+import net.engio.mbassy.listener.Handler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.net.*;
+import java.util.Date;
 
 /**
  * <pre>

@@ -12,33 +12,21 @@
  */
 package com.hhi.vaas.platform.agent.update;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.tools.ant.taskdefs.optional.ReplaceRegExp;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.agent.vcd.VCDHandler;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import com.hhi.vaas.platform.vdm.parser.DataConverter;
 import com.hhi.vaas.platform.vdm.parser.DataConverterFactory;
+import org.apache.commons.io.FileUtils;
+import org.apache.tools.ant.taskdefs.optional.ReplaceRegExp;
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.*;
+
+import static org.junit.Assert.*;
 
 public class UpdateHandlerTest {
 	

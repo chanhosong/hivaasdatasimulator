@@ -1,27 +1,13 @@
 package com.hhi.vaas.platform.vdm.handler;
 
-import static org.junit.Assert.*;
-
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
+import org.junit.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.ErrorHandler;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 
-import com.hhi.vaas.platform.middleware.common.util.XMLUtil;
+import static org.junit.Assert.*;
 
 public class VesselDataModelTest2 {
 	

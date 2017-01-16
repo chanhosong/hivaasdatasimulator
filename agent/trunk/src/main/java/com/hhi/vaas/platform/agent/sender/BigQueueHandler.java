@@ -15,18 +15,17 @@
  */
 package com.hhi.vaas.platform.agent.sender;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.hhi.vaas.platform.agent.model.BackupMessage;
 import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import com.leansoft.bigqueue.BigArrayImpl;
 import com.leansoft.bigqueue.BigQueueImpl;
 import com.leansoft.bigqueue.IBigQueue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author BongJin Kwon

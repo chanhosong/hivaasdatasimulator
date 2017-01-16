@@ -12,14 +12,12 @@
  */
 package com.hhi.vaas.platform.middleware.adapter;
 
+import com.hhi.vaas.platform.middleware.common.logging.LogbackInitializer;
+import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.hhi.vaas.platform.middleware.adapter.AdapterManager;
-import com.hhi.vaas.platform.middleware.common.logging.LogbackInitializer;
-import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 
 /**
  * <pre>

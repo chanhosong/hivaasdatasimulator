@@ -12,11 +12,7 @@
  */
 package com.hhi.vaas.platform.agent.receiver;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /*
  * 로그파일로 테스트 데이타 만들기.

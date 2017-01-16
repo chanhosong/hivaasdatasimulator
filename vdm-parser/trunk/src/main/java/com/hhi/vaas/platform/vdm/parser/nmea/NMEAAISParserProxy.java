@@ -15,14 +15,13 @@
  */
 package com.hhi.vaas.platform.vdm.parser.nmea;
 
-import java.io.IOException;
-import java.util.List;
-
+import com.hhi.vaas.platform.vdm.parser.ais.AISDecoder;
+import com.hhi.vaas.platform.vdm.parser.exception.ParserException;
 import net.sf.marineapi.nmea.sentence.Sentence;
 import net.sf.marineapi.nmea.sentence.SentenceValidator;
 
-import com.hhi.vaas.platform.vdm.parser.ais.AISDecoder;
-import com.hhi.vaas.platform.vdm.parser.exception.ParserException;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * @author BongJin Kwon

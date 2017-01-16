@@ -12,10 +12,10 @@
  */
 package com.hhi.vaas.platform.agent.enlist;
 
-import static org.junit.Assert.*;
-
-import java.net.InetSocketAddress;
-
+import com.hhi.vaas.platform.agent.health.Activator;
+import com.hhi.vaas.platform.agent.model.AgentStatus;
+import com.hhi.vaas.platform.agent.sender.RabbitMQSender;
+import com.hhi.vaas.platform.middleware.common.util.PropertyService;
 import org.apache.http.localserver.LocalServerTestBase;
 import org.apache.http.localserver.LocalTestServer;
 import org.junit.AfterClass;
@@ -23,10 +23,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.hhi.vaas.platform.agent.health.Activator;
-import com.hhi.vaas.platform.agent.model.AgentStatus;
-import com.hhi.vaas.platform.agent.sender.RabbitMQSender;
-import com.hhi.vaas.platform.middleware.common.util.PropertyService;
+import java.net.InetSocketAddress;
+
+import static org.junit.Assert.*;
 
 public class EnlistHandlerTest extends LocalServerTestBase{
 	
